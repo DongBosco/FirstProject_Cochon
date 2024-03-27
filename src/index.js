@@ -15,7 +15,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-const menuSwiper = new Swiper(".swiper", {
+const menuSwiper = new Swiper(".menu-swiper", {
   slidesPerView: 3,
   spaceBetween: 0,
   centeredSlides: true,
@@ -25,13 +25,13 @@ const menuSwiper = new Swiper(".swiper", {
   },
   // Pagination
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-pagination.menu",
   },
 
   // Navigation arrows
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next.menuLeft",
+    prevEl: ".swiper-button-prev.menuRight",
   },
 });
 
