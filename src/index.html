@@ -1,20 +1,233 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- css 첨부 -->
-    <link rel="stylesheet" href="./index.css">
-    <!-- JavaScript -->
-    <script src="./index.js"></script>
-    <!-- bootstrp -->
-    <script src="./bundle/bootstrap.bundle.min.js"></script>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div class="container">
-        <!-- nav -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto Sans KR"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- 1) HEADER start -->
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="topSmallHeader col-12">
+          <div class="topSmallHeaderL">
+            <a href="#">교촌치킨</a>
+            <a href="#">교촌 F&amp;B</a>
+          </div>
+          <div class="topSmallHeaderR">
+            <span>
+              <a href="#">고객센터</a>
+              <a href=""><img src="../images/line_sua.gif" alt="" /></a>
+              <a href="#">사이트맵</a>
+              <a href=""><img src="../images/line_sua.gif" alt="" /></a>
+              <a href="#">가맹점 개설안내</a>
+            </span>
+          </div>
+        </div>
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img
+              src="../images/kyochon_logo.png"
+              width="480"
+              height="135"
+              class="d-inline-block align-top"
+              alt=""
+            />
+          </a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="#">메뉴</a></li>
+          <li>
+            <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
+          </li>
+          <li><a href="#">매장안내</a></li>
+          <li>
+            <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
+          </li>
+          <li><a href="#">이벤트</a></li>
+          <li>
+            <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
+          </li>
+          <li><a href="#">주문</a></li>
+          <li>
+            <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
+          </li>
+          <li><a href="#">E-쿠폰</a></li>
+          <li>
+            <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
+          </li>
+          <li><a href="#">교촌스토리</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- 1) HEADER end -->
+    <!-- 2) First Image Slider start -->
+    <div class="menuSwiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <a href="#"><img src="../images/banner1.jpg" alt="" /></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#"><img src="../images/banner2.jpg" alt="" /></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#"><img src="../images/banner3.jpg" alt="" /></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#"><img src="../images/banner4.jpg" alt="" /></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#"><img src="../images/banner5.jpg" alt="" /></a>
+        </div>
+      </div>
+      <!-- pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
-</body>
+    <!-- 2) First Image Slider end -->
+    <!-- 3) Menu Slider start -->
+    <div class="menu">
+      <h3>MENU</h3>
+      <!-- Menu image slider main container -->
+      <div class="swiper menu-swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <a href="#" class="menuCard"
+              ><img src="../images/original.png" alt="" /><span
+                >교촌오리지날</span
+              ></a
+            >
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="menuCard"
+              ><img src="../images/justhoney.png" alt="" /><span
+                >허니순살</span
+              ></a
+            >
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="menuCard"
+              ><img src="../images/justred.png" alt="" /><span
+                >레드순살</span
+              ></a
+            >
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="menuCard"
+              ><img src="../images/redhoney.png" alt="" /><span
+                >레허반반순살</span
+              ></a
+            >
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="menuCard"
+              ><img src="../images/redhoneynew.png" alt="" /><span
+                >반반점보윙(레드/허니)</span
+              ></a
+            >
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="menuCard"
+              ><img src="../images/rednew.png" alt="" /><span
+                >반반점보윙(교촌/레드)</span
+              ></a
+            >
+          </div>
+        </div>
+        <!-- pagination -->
+        <div class="swiper-pagination menu"></div>
+
+        <!-- navigation buttons -->
+        <div class="swiper-button-prev menuLeft"></div>
+        <div class="swiper-button-next menuRight"></div>
+      </div>
+    </div>
+    <!-- 3) Menu Slider end -->
+    <!-- 4) Map/Event/News section start -->
+
+    <div class="container-fluid fourth-section">
+      <!--매장검색-->
+      <div>
+        <h3>Store Search</h3>
+        <div class="form">
+          <form>
+            <input
+              type="text"
+              placeholder="매장명 또는 지역을 입력"
+              title="매장명 또는 지역을 입력"
+            />
+            <a href="#">검색</a>
+          </form>
+        </div>
+      </div>
+      <!--뉴스-->
+      <div class="news">
+        <h3>Happy Kyochon</h3>
+        <ul>
+          <li>
+            <a href="#"><span>Kyochon Event</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Kyochon News</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 4) Map/Event/News section end -->
+    <!-- 5) 가맹점 개설 안내 section start -->
+    <!-- 5) 가맹점 개설 안내 section end -->
+    <!-- 6) FOOTER start -->
+    <div class="container-fluid">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col">1</div>
+          <div class="col">2</div>
+          <div class="col">3</div>
+          <div class="col">4</div>
+        </div>
+        <div class="row">
+          <div class="col">1</div>
+          <div class="col">2</div>
+          <div class="col">3</div>
+          <div class="col">4</div>
+        </div>
+        <div class="row">
+          <div class="col">1</div>
+          <div class="col">2</div>
+          <div class="col">3</div>
+          <div class="col">4</div>
+        </div>
+        <div class="row">
+          <div class="col">1</div>
+          <div class="col">2</div>
+          <div class="col">3</div>
+          <div class="col">4</div>
+        </div>
+      </footer>
+    </div>
+    <!-- 6) FOOTER end -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
 </html>
