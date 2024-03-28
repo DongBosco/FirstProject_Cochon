@@ -23,6 +23,7 @@ a:visited {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: fixed;
   width: 100%;
+  padding-bottom: 30px;
   top: 0;
   z-index: 10;
   font-family: "Noto Sans KR";
@@ -70,6 +71,12 @@ a:visited {
   border-bottom: 0px none;
 }
 
+.toggle {
+  height: 40px;
+  width: 40px;
+  background-color: gray;
+}
+
 /* 1) Header_end */
 
 /* 2) nav_start */
@@ -104,20 +111,36 @@ a:visited {
   color: black;
 }
 
-.swiper {
-  width: 100%;
+.swiper-button-prev {
+  margin-left: 20px;
+}
+
+.swiper-button-next {
+  margin-right: 20px;
+}
+
+.swiper.swipWrap {
+  --swiper-navigation-size: 30px;
+}
+
+.swiper.menu-swiper {
+  --swiper-navigation-size: 20px;
+  --swiper-pagination-bottom: 0px;
+  /* background-color: red; */
+  height: 350px;
+  width: 1200px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 13px;
 }
 
 /* 4) swipWrap_end */
 
 /* 5) menuWrap_start */
 .menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 80px;
-  margin-bottom: 80px;
   font-size: 26px;
 }
 
@@ -125,6 +148,7 @@ a:visited {
   display: flex;
   flex-direction: column;
 }
+
 /* 5) menuWrap_end */
 
 /* 6) contentsWrap_start */

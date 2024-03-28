@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CoChonChick</title>
+    <title>교촌치킨</title>
+    <link rel="icon" href="../images/chicken.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
@@ -43,14 +44,11 @@
             <a class="navbar-brand" href="#">
               <img
                 src="../images/kyochon_logo.png"
-                width="480"
-                height="135"
-                class="d-inline-block align-top"
                 alt="로고로딩실패"
               />
             </a>
           </div>
-          <div class="d-flex d-md-none" style="height:40px; width:40px;background-color: gray;"></div>
+          <div class="toggle d-block d-md-none"></div>
           <div class="d-none d-md-flex">
             <ul class="nav navbar-nav">
               <li><a href="#">메뉴</a></li>
@@ -119,12 +117,10 @@
       <!-- 4) swipWrap_end -->
 
       <!-- 5) menuWrap_start -->
-      <!-- 사진 사이즈를 임시로 넣어놨습니다. 해당 사이즈를 css파일에서 다시 지정해주세요. -> by_bosco -->
-      <div class="menuWrap">
-        <!-- 20240327-> by Chloe -> 임시로 만들어놓은거라 수정 필요합니다.->by Bosco -->
-        <h3>MENU</h3>
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <h3 class="mt-5">MENU</h3>
         <div class="menuSwipWrap">
-          <div class="menu">
+          <div class="menu mt-5 mb-5">
             <!-- Menu image slider main container -->
             <div class="swiper menu-swiper">
               <!-- Additional required wrapper -->
@@ -137,12 +133,7 @@
                       alt=""
                       style="width: 300px; height: 250px"
                     /><span>교촌오리지날</span></a
-                    ><img
-                      src="../images/original.png"
-                      alt=""
-                      style="width: 300px; height: 250px"
-                    /><span>교촌오리지날</span></a
-                  >
+                    >
                 </div>
                 <div class="swiper-slide">
                   <a href="#" class="menuCard"
@@ -151,12 +142,7 @@
                       alt=""
                       style="width: 300px; height: 250px"
                     /><span>허니순살</span></a
-                    ><img
-                      src="../images/justhoney.png"
-                      alt=""
-                      style="width: 300px; height: 250px"
-                    /><span>허니순살</span></a
-                  >
+                    >
                 </div>
                 <div class="swiper-slide">
                   <a href="#" class="menuCard"
@@ -165,12 +151,7 @@
                       alt=""
                       style="width: 300px; height: 250px"
                     /><span>레드순살</span></a
-                    ><img
-                      src="../images/justred.png"
-                      alt=""
-                      style="width: 300px; height: 250px"
-                    /><span>레드순살</span></a
-                  >
+                    >
                 </div>
                 <div class="swiper-slide">
                   <a href="#" class="menuCard"
@@ -179,12 +160,7 @@
                       alt=""
                       style="width: 300px; height: 250px"
                     /><span>레허반반순살</span></a
-                    ><img
-                      src="../images/redhoney.png"
-                      alt=""
-                      style="width: 300px; height: 250px"
-                    /><span>레허반반순살</span></a
-                  >
+                    >
                 </div>
                 <div class="swiper-slide">
                   <a href="#" class="menuCard"
@@ -193,12 +169,7 @@
                       alt=""
                       style="width: 300px; height: 250px"
                     /><span>반반점보윙(레드/허니)</span></a
-                    ><img
-                      src="../images/redhoneynew.png"
-                      alt=""
-                      style="width: 300px; height: 250px"
-                    /><span>반반점보윙(레드/허니)</span></a
-                  >
+                    >
                 </div>
                 <div class="swiper-slide">
                   <a href="#" class="menuCard"
@@ -207,12 +178,7 @@
                       alt=""
                       style="width: 300px; height: 250px"
                     /><span>반반점보윙(교촌/레드)</span></a
-                    ><img
-                      src="../images/rednew.png"
-                      alt=""
-                      style="width: 300px; height: 250px"
-                    /><span>반반점보윙(교촌/레드)</span></a
-                  >
+                    >
                 </div>
               </div>
               <!-- pagination -->
