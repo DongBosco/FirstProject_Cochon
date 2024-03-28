@@ -137,6 +137,38 @@ a:visited {
   margin: 0 13px;
 }
 
+/*css responsive start*/
+/* to make slider image size responsive */
+/* media query has 4 levels, whereas bootstrap has 5 levels of screen size */
+@media screen and (max-width: 1199px) {
+  .swipWrap .swiper-slide img {
+    width: 1920px;
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .swipWrap .swiper-slide img {
+    width: 1140px;
+    height: 315px;
+  }
+}
+
+/* mobile size. max width 767px */
+@media screen and (max-width: 767px) {
+  .swipWrap .swiper-slide img {
+    width: 960px;
+    height: 210px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .swipWrap .swiper-slide img {
+    width: 480px;
+    height: 105px;
+  }
+}
+/*css responsive end*/
+
 /* 4) swipWrap_end */
 
 /* 5) menuWrap_start */
