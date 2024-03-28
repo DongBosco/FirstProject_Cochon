@@ -137,6 +137,21 @@ a:visited {
   margin: 0 13px;
 }
 
+.menuSwipWrap .swiper-slide img {
+  width: 300px;
+  height: 250px;
+}
+
+.menuSwipWrap .swiper-slide span {
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: fit-content;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 35px;
+}
+
 /*css responsive start*/
 /* to make slider image size responsive */
 /* media query has 4 levels, whereas bootstrap has 5 levels of screen size */
@@ -144,6 +159,14 @@ a:visited {
   .swipWrap .swiper-slide img {
     width: 1920px;
     height: 420px;
+  }
+  /* .menuSwipWrap .swiper-slide img {
+    width: 200px;
+    height: 150px;
+  } */
+  .menuSwipWrap .menu-swiper {
+    /* background-color: blue; */
+    height: 250px;
   }
 }
 
@@ -163,7 +186,7 @@ a:visited {
 }
 @media screen and (max-width: 575px) {
   .swipWrap .swiper-slide img {
-    width: 480px;
+    width: 960px;
     height: 105px;
   }
 }
