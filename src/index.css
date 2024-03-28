@@ -5,7 +5,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 ul,
 li {
   list-style: none;
@@ -70,7 +75,7 @@ a:visited {
   border-top: 0px none;
   border-bottom: 0px none;
 }
-
+/* 빼야할지도 */
 .toggle {
   height: 40px;
   width: 40px;
@@ -241,5 +246,82 @@ a:visited {
 /* 7) contentsBox_end */
 
 /* 8) botBoxWrap_start */
+.botBoxWrap {
+  /* width: 100%;
+  text-align: center;
+  padding: 75px;
+  margin-bottom: 12px; */
+  text-align: center;
+}
 
+.botBoxWrap > h3 {
+  font-size: 26px;
+  font-weight: 600;
+}
+.botBoxWrap > p {
+  color: #626262;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.botBox p {
+  margin: 0;
+}
+
+.boxTxtWrap {
+  background-color: white;
+  width: 110px;
+  height: 40px;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  gap: 7px;
+}
+
+.boxTxtWrap p {
+  font-size: 16px;
+}
+
+.botBoxContainer {
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0;
+}
 /* 8) botBoxWrap_end */
+
+/* 9) footer_start */
+.footerWrap {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* background-color: skyblue; */
+  /* height: 281px; */
+  /* margin: 0 auto; */
+  padding: 55px 0 0 0;
+}
+.footerWrap .snsIconWrap ul.iconWrap {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.line1 {
+  font-size: 14px;
+  color: #737373;
+}
+.line3 {
+  font-size: 14px;
+  color: #737373;
+  /* display: flex;
+  justify-content: center; */
+}
+
+img {
+  vertical-align: top;
+}
+/* 9) footer_end */
