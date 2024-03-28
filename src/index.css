@@ -1,3 +1,12 @@
+@charset "utf-8";
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +16,8 @@
 ul,
 li {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a:link,
@@ -43,7 +54,53 @@ a:visited {
 
 /* 7) contentsBox_end */
 
-/* 8) botBoxWrap_start */
+/* 8) botBoxWrap_start_20240328_by_edKim */
+
+.botBoxWrap {
+  width: 100%;
+  text-align: center;
+  padding: 75px;
+  margin-bottom: 12px;
+}
+
+.botBoxWrap > h3 {
+  font-size: 26px;
+  font-weight: 600;
+}
+.botBoxWrap > p {
+  color: #626262;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.botBox p {
+  margin: 0;
+}
+
+.boxTxtWrap {
+  background-color: white;
+  width: 110px;
+  height: 40px;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  gap: 7px;
+}
+
+.boxTxtWrap p {
+  font-size: 16px;
+}
+
+.botBoxContainer {
+  width: 1530px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
 
 /* 8) botBoxWrap_end */
 
@@ -131,31 +188,16 @@ a:visited {
   gap: 100px;
 }
 
-@charset "utf-8";
-
-/* reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-a:link,
-a:visited {
-  text-decoration: none;
-  color: #333;
-}
-ul,
-li {
-  list-style: none;
-}
+/* footer_start_20240328_by_edKim */
 
 .footerWrap {
   display: flex;
   align-items: center;
   justify-content: center;
   /* background-color: skyblue; */
-  width: 100%;
+  width: 1530px;
   height: 281px;
+  margin: 0 auto;
 }
 
 .footerWrap .footerContainer {
@@ -192,8 +234,12 @@ li {
   gap: 25px;
   color: #737373;
 }
+
 .footerWrap .snsIconWrap ul.iconWrap {
+  /* background-color: red; */
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 .line1 {
@@ -226,4 +272,8 @@ li {
   color: #737373;
   /* display: flex;
   justify-content: center; */
+}
+
+img {
+  vertical-align: top;
 }
