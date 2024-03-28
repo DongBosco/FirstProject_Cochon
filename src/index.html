@@ -20,58 +20,62 @@
   </head>
   <body>
     <!-- 1),2) Header,nav_start -->
-    <nav class="navbar">
-      <div class="innerWrap container-fluid">
-        <div class="innerTop topSmallHeader col-12">
-          <div class="topSmallHeaderL">
-            <a href="#">교촌치킨</a>
-            <a href="#">교촌 F&amp;B</a>
+    <nav class="header">
+      <!-- bootstrap container width fixed to 1240px or similar -->
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="innerTopL">
+            <ul class="d-flex">
+              <li><a href="#">교촌치킨</a></li>
+              <li><a href="#"></a>교촌 F&amp;B</a></li>
+            </ul>
           </div>
-          <div class="topSmallHeaderR">
-            <span>
-              <a href="#">고객센터</a>
-              <a href=""><img src="../images/line_sua.gif" alt="" /></a>
-              <a href="#">사이트맵</a>
-              <a href=""><img src="../images/line_sua.gif" alt="" /></a>
-              <a href="#">가맹점 개설안내</a>
-            </span>
+          <div class="innerTopR d-none d-md-block">
+            <ul class="d-flex justify-content-between align-items-center">
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">사이트맵</a></li>
+              <li><a href="#">가맹점 개설안내</a></li>
+            </ul>
           </div>
         </div>
-        <div class="navbar-header logoImg">
-          <a class="navbar-brand" href="#">
-            <img
-              src="../images/kyochon_logo.png"
-              width="480"
-              height="135"
-              class="d-inline-block align-top"
-              alt="로고로딩실패"
-            />
-          </a>
-        </div>
-        <div class="navMenuWrap">
-          <ul class="nav navbar-nav">
-            <li><a href="#">메뉴</a></li>
-            <li>
-              <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
-            </li>
-            <li><a href="#">매장안내</a></li>
-            <li>
-              <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
-            </li>
-            <li><a href="#">이벤트</a></li>
-            <li>
-              <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
-            </li>
-            <li><a href="#">주문</a></li>
-            <li>
-              <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
-            </li>
-            <li><a href="#">E-쿠폰</a></li>
-            <li>
-              <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
-            </li>
-            <li><a href="#">교촌스토리</a></li>
-          </ul>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="logoImg">
+            <a class="navbar-brand" href="#">
+              <img
+                src="../images/kyochon_logo.png"
+                width="480"
+                height="135"
+                class="d-inline-block align-top"
+                alt="로고로딩실패"
+              />
+            </a>
+          </div>
+          <div class="d-flex d-md-none" style="height:40px; width:40px;background-color: gray;"></div>
+          <div class="d-none d-md-flex">
+            <ul class="nav navbar-nav">
+              <li><a href="#">메뉴</a></li>
+              <li>
+                <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
+              </li>
+              <li><a href="#">매장안내</a></li>
+              <li>
+                <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
+              </li>
+              <li><a href="#">이벤트</a></li>
+              <li>
+                <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
+              </li>
+              <li><a href="#">주문</a></li>
+              <li>
+                <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
+              </li>
+              <li><a href="#">E-쿠폰</a></li>
+              <li>
+                <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
+              </li>
+              <li><a href="#">교촌스토리</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
