@@ -57,10 +57,11 @@ a:visited {
 /* 8) botBoxWrap_start_20240328_by_edKim */
 
 .botBoxWrap {
-  width: 100%;
+  /* width: 100%;
   text-align: center;
   padding: 75px;
-  margin-bottom: 12px;
+  margin-bottom: 12px; */
+  text-align: center;
 }
 
 .botBoxWrap > h3 {
@@ -95,11 +96,10 @@ a:visited {
 }
 
 .botBoxContainer {
-  width: 1530px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px;
+  padding: 0 0;
 }
 
 /* 8) botBoxWrap_end */
@@ -191,20 +191,18 @@ a:visited {
 /* footer_start_20240328_by_edKim */
 
 .footerWrap {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   /* background-color: skyblue; */
-  width: 1530px;
-  height: 281px;
-  margin: 0 auto;
+  /* height: 281px; */
+  /* margin: 0 auto; */
+  padding: 55px 0 0 0;
 }
 
 .footerWrap .footerContainer {
   /* background-color: #eee; */
   text-align: center;
-  margin: 0 auto;
-  width: 100%;
 }
 
 .policyWrap {
