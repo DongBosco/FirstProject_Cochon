@@ -15,59 +15,57 @@ a:visited {
   color: black;
 }
 
-
-
 /* 1) Header_start */
+.navbar-header {
+  /* background-color: blue; */
+  width: 300px;
+}
 
 /* 1) Header_end */
-  
-
 
 /* 2) nav_start */
+.navMenuWrap {
+  /* background-color: pink; */
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  /* background-color: red; */
+}
+/* .navbar-nav {
+  background-color: blue;
+  width: 100%;
+} */
 
 /* 2) nav_end */
-
-
 
 /* 3) Body_start */
 
 /* 3) Body_end */
 
-
-
 /* 4) swipWrap_start */
+.swiper-button-prev,
+.swiper-button-next {
+  color: black;
+}
 
 /* 4) swipWrap_end */
-
-
 
 /* 5) menuWrap_start */
 
 /* 5) menuWrap_end */
 
-
-
 /* 6) contentsWrap_start */
 
 /* 6) contentsWrap_end */
 
-
-
-
 /* 7) contentsBox_start */
 
 /* 7) contentsBox_end */
- 
-
-
 
 /* 8) botBoxWrap_start */
 
 /* 8) botBoxWrap_end */
-
-
-
-
 
 .nav.navbar-nav {
   display: flex;
@@ -94,12 +92,13 @@ a:visited {
 }
 
 .topSmallHeader {
-  /* background-color: skyblue; */
+  background-color: skyblue;
   position: absolute;
   top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 80%;
 }
 
 .topSmallHeaderL {
