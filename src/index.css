@@ -160,13 +160,21 @@ a:visited {
     width: 1920px;
     height: 420px;
   }
-  /* .menuSwipWrap .swiper-slide img {
+  .menuSwipWrap .swiper-slide img {
     width: 200px;
     height: 150px;
-  } */
+  }
   .menuSwipWrap .menu-swiper {
     /* background-color: blue; */
-    height: 250px;
+    height: 350px;
+  }
+  .menuSwipWrap .swiper-slide span {
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 25px;
+  }
+  .swiper.menu-swiper {
+    --swiper-pagination-bottom: 100px;
   }
 }
 
