@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+/* 1) Header_start */
+
+/* 1) Header_end */
+  
+
+
+/* 2) nav_start */
+
+/* 2) nav_end */
+
+
+
+/* 3) Body_start */
+
+/* 3) Body_end */
+
+
+
+/* 4) swipWrap_start */
+
+/* 4) swipWrap_end */
+
+
+
+/* 5) menuWrap_start */
+
+/* 5) menuWrap_end */
+
+
+
+/* 6) contentsWrap_start */
+
+/* 6) contentsWrap_end */
+
+
+
+
+/* 7) contentsBox_start */
+
+/* 7) contentsBox_end */
+ 
+
+
+
+/* 8) botBoxWrap_start */
+
+/* 8) botBoxWrap_end */
+
+
+
+
+
+.nav.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.navbar-header {
+  /* background-color: blue; */
+  width: 300px;
+}
+
+.navbar-nav {
+  /* background-color: pink; */
+  margin-right: 20px;
+}
+
+/* .container-fluid {
+  background-color: grey;
+} */
+
+.swiper {
+  width: 100%;
+}
+
+.topSmallHeader {
+  /* background-color: skyblue; */
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.topSmallHeaderL {
+  /* background-color: grey; */
+  font-family: "Noto Sans KR";
+  font-size: 11px;
+  font-weight: bold;
+  display: flex;
+}
+.topSmallHeaderL > a {
+  padding: 5px 10px;
+  width: 99px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topSmallHeaderL > a:nth-child(1) {
+  background-color: #f8b915;
+}
+.topSmallHeaderL > a:nth-child(2) {
+  background-color: black;
+  color: white;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: black;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  font-size: 26px;
+}
+
+.menuCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.fourth-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}

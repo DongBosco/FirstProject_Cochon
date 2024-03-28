@@ -1,20 +1,284 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- css 첨부 -->
-    <link rel="stylesheet" href="./index.css">
-    <!-- JavaScript -->
-    <script src="./index.js"></script>
-    <!-- bootstrp -->
-    <script src="./bundle/bootstrap.bundle.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoChonChick</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto Sans KR"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- 1),2) Header,nav_start -->
+    <nav class="navbar bg-primary">
+      <div class="navContainer">
+        <div class="innerWrap ">
+          <div class="innerTop d-flex">
+            <div class="brandBox">
+              <div class="topSmallHeaderL">
+                <a href="#">교촌치킨</a>
+                <a href="#">교촌 F&amp;B</a>
+              </div>
+            </div>
+            <div class="siteLink ">
+              <div class="topSmallHeaderR">
+                <span>
+                  <a href="#">고객센터</a>
+                  <a href=""><img src="../images/line_sua.gif" alt="" /></a>
+                  <a href="#">사이트맵</a>
+                  <a href=""><img src="../images/line_sua.gif" alt="" /></a>
+                  <a href="#">가맹점 개설안내</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="innerBot d-flex bg-danger">
+            <div class="logoImg">        
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                <img
+                  src="../images/kyochon_logo.png"
+                  width="480"
+                  height="135"
+                  class="d-inline-block align-top"
+                  alt="로고로딩실패"
+                />
+                </a>
+              </div>
+            </div>         
+            <div class="navMenuWrap bg-info">
+              <ul class="nav navbar-nav">
+                <li><a href="#">메뉴</a></li>
+                <li>
+                  <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
+                </li>
+                <li><a href="#">매장안내</a></li>
+                <li>
+                  <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
+                </li>
+                <li><a href="#">이벤트</a></li>
+                <li>
+                  <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
+                </li>
+                <li><a href="#">주문</a></li>
+                <li>
+                  <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
+                </li>
+                <li><a href="#">E-쿠폰</a></li>
+                <li>
+                  <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
+                </li>
+                <li><a href="#">교촌스토리</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- 1),2) Header,nav_end -->
 
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
-        <!-- nav -->
+    <!-- 3) Body_start -->
+    <div class="bodyContainer">
+    <!-- 4) swipWrap_start -->
+      <div class="swipWrap bg-success">
+        <br><br><br><br><br><br><br>
+        <P>여기에는 공지사항 swiper가 들어올 예정입니다.</P>
+        <br><br><br><br><br><br><br>
+      </div>
+    <!-- 4) swipWrap_end -->
+
+
+    <!-- 5) menuWrap_start -->
+    <!-- 사진 사이즈를 임시로 넣어놨습니다. 해당 사이즈를 css파일에서 다시 지정해주세요. -> by_bosco -->
+      <div class="menuWrap bg-warning">
+        <!-- 20240327-> by Chloe -> 임시로 만들어놓은거라 수정 필요합니다.->by Bosco -->
+        <h3>MENU</h3>
+        <div class="menuSwipWrap">
+          <div class="menu">
+            <!-- Menu image slider main container -->
+            <div class="swiper menu-swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <a href="#" class="menuCard"
+                    ><img src="../images/original.png" alt="" style="width: 300px; height: 250px"/><span
+                      >교촌오리지날</span
+                    ></a
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="menuCard"
+                    ><img src="../images/justhoney.png" alt="" style="width: 300px; height: 250px"/><span
+                      >허니순살</span
+                    ></a
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="menuCard"
+                    ><img src="../images/justred.png" alt="" style="width: 300px; height: 250px"/><span
+                      >레드순살</span
+                    ></a
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="menuCard"
+                    ><img src="../images/redhoney.png" alt="" style="width: 300px; height: 250px"/><span
+                      >레허반반순살</span
+                    ></a
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="menuCard"
+                    ><img src="../images/redhoneynew.png" alt="" style="width: 300px; height: 250px"/><span
+                      >반반점보윙(레드/허니)</span
+                    ></a
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="menuCard"
+                    ><img src="../images/rednew.png" alt="" style="width: 300px; height: 250px"/><span
+                      >반반점보윙(교촌/레드)</span
+                    ></a
+                  >
+                </div>
+              </div>
+              <!-- pagination -->
+              <div class="swiper-pagination menu"></div>
+      
+              <!-- navigation buttons -->
+              <div class="swiper-button-prev menuLeft"></div>
+              <div class="swiper-button-next menuRight"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 5) menuWrap_end -->
+      <!-- 6) contentsWrap_start -->
+      <div class="contentsWrap d-flex bg-info">
+        <!-- 7) contentsBox_start -->
+        <div class="serchBoxWrap">
+          <div class="serchBoxContainer">
+            <h3>Store Search</h3>
+            <div class="form"> <!-- div하나 걷어내야됩니다 -> by_bosco-->
+              <form>
+                <input
+                  type="text"
+                  placeholder="매장명 또는 지역을 입력"
+                  title="매장명 또는 지역을 입력"
+                />
+                <button href="#">검색</button>
+              </form>
+            </div>
+            <div class="resulList">
+              <p>여기에는 검색 결과를 보여줄거에용</p>
+            </div>
+          </div>
+        </div>
+        <div class="newsBoxWrap">
+          <div class="newsBoxContainer">
+            <h3>Happy Kyochon</h3>
+            <div class="btnWraper d-flex">
+              <div class="eventBtn ">
+                <button >이벤트</button>
+                <span class="evnetTitle">CoChon Event</span>
+              </div>              
+              <div class="newsBtn ">
+                <button >뉴스</button>
+                <span class="newsTitle">CoChon News</span>
+              </div> 
+            </div>
+          </div>
+        </div>
+        <!-- 7) contentsBox_end -->
+      </div>
+      <!-- 6) contentsWrap_end -->
+      <!-- 8) botBoxWrap_start -->      
+      <div class="botBoxWrap bg-secondary">
+        <h3>가맹점 개설 안내</h3>
+        <p>코촌 F&B의 가족으로 모시고자 합니다</p>
+        <div class="botBoxContainer d-flex">
+            <div class="botBox">
+              <img src="" alt="">
+              <a href="#">
+                <span>사업전망</span>
+              </a>
+            </div>
+            <div class="botBox">
+              <img src="" alt="">
+              <a href="#">
+                <span>개설절차</span>
+              </a>
+            </div>
+            <div class="botBox">
+              <img src="" alt="">
+              <a href="#">
+                <span>인테리어</span>
+              </a>
+            </div>
+            <div class="botBox">
+              <img src="" alt="">
+              <a href="#">
+                <span>상담창구</span>
+              </a>
+            </div>
+        </div>
+      </div>
+      <!-- 8) botBoxWrap_end -->
     </div>
-</body>
+    <!-- 3) Body_end -->
+
+    <!-- Footer_start-->
+    <footer>
+      <div id="footer" class="newUi bg-success">
+        <div class="footCont">
+          <div class="topLink">
+            <span class="link">
+              <a href="javascript:link0901();">이용약관</a>
+              <a href="javascript:link0902();" class="privacy">개인정보처리방침</a>
+              <a href="/etc/personal_location_privacy.asp">개인위치정보처리방침</a>
+              <a href="/etc/location_privacy.asp">위치정보 이용약관</a>
+              <a href="/etc/cctv_privacy.asp" class="" >영상정보처리기기 운영관리 방침</a>
+              <a href="javascript:openLay('mailLy');">이메일 무단수집거부</a>
+              <a href="javascript:link0903();">찾아오시는 길</a>
+            </span>
+          </div>
+          <div class="midLink">
+            <img src="../images/ico_callNumber.svg" alt="전화주문 1577-1991" />
+            <span class="sns_links">
+              <a href="https://www.facebook.com" target="_blank" title="새창열림"><img src="../images/ico_facebook.svg" alt="코촌 facebook 바로가기" /></a>
+              <a href="https://www.instagram.com/_dk960227" target="_blank" title="새창열림"><img src="../images/ico_insta.svg" alt="코촌 instagram 바로가기" /></a>
+              <a href="https://www.youtube.com/watch?v=mesRhn_OWA8" target="_blank" title="새창열림"><img src="../images/ico_youtube.svg" alt="코촌 youtube없으니까 노래나 듣죠" /></a>
+              <a href="https://twitter.com/elonmusk" target="_blank" title="새창열림"><img src="../images/ico_twitter.svg" alt="화성갈끄니까~" /></a>
+            </span>
+            <a href="https://www.codelabit.co.kr//" target="_blank" class="bissMem" title="새창열림"><img src="../images/kyochon_logo.png" alt="가맹점 공간 바로가기" /></a>
+          </div>
+          <div class="textBox">
+            <span class="no_line">사업장소재지 : 서울 금천구 가산디지털2로 144 현대테라타워 가산DK A동 20층 2013~2018호 (우)08503
+            </span>
+            <span>상호명 : 코드랩아카데미(주)</span>
+            <span>대표이사 : 누굴까...</span><br />
+            <span class="no_line">대표번호 : 02-2038-0800</span>
+            <span>소비자상담번호 : 02-2038-0800</span>                        
+            <span>개인정보보호책임자 : 최 동규</span>
+            <span>영업시간 : 09:40~18:30</span>
+          </div>
+          <address>Copyright 2024 &copy; CoChon F&amp;B. All rights reserved.</address>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer_end-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
 </html>
