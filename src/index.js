@@ -1,4 +1,18 @@
-const swiper = new Swiper(".swiper", {
+// 1) Header_start
+
+// 1) Header_end
+
+// 2) nav_start
+
+// 2) nav_end
+
+// 3) Body_start
+
+// 3) Body_end
+
+// 4) swipWrap_start
+
+const swiper = new Swiper(".swipWrap", {
   loop: true,
   autoplay: {
     delay: 5000,
@@ -26,34 +40,21 @@ const menuSwiper = new Swiper(".menu-swiper", {
   // Pagination
   pagination: {
     el: ".swiper-pagination.menu",
+    // swiper-pagination-bullet is the default value already
+    // bulletClass: `swiper-pagination-bullet`,
   },
 
   // Navigation arrows
   navigation: {
-    nextEl: ".swiper-button-next.menuLeft",
-    prevEl: ".swiper-button-prev.menuRight",
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
 
-const swiperSlide = document.querySelector(".swiper").swiper;
+const swiperSlide = document.querySelector(".swipWrap").swiper;
 const menuSwiperSlide = document.querySelector(".menuSwiper").menuSwiper;
 
 swiperSlide.slideNext();
-
-
-// 1) Header_start
-
-// 1) Header_end
-
-// 2) nav_start
-
-// 2) nav_end
-
-// 3) Body_start
-
-// 3) Body_end
-
-// 4) swipWrap_start
 
 // 4) swipWrap_end
 
@@ -68,7 +69,7 @@ swiperSlide.slideNext();
 // 7) contentsBox_start
 
 // 7) contentsBox_end
- 
+
 // 8) botBoxWrap_start
 
 // 8) botBoxWrap_end
