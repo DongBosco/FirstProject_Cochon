@@ -52,6 +52,13 @@ a:visited {
 
 /* 7) contentsBox_start */
 
+.contentsWrap {
+  padding: 60px 0 75px 0;
+}
+
+.serchBoxContainer > h3 {
+  margin-bottom: 60px;
+}
 /* 7) contentsBox_end */
 
 /* 8) botBoxWrap_start_20240328_by_edKim */

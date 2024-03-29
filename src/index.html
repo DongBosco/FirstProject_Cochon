@@ -189,47 +189,56 @@
       </div>
       <!-- 5) menuWrap_end -->
       <!-- 6) contentsWrap_start -->
-      <div class="contentsWrap d-flex bg-info">
+      <div class="container contentsWrap bg-warning">
         <!-- 7) contentsBox_start -->
-        <div class="serchBoxWrap">
-          <div class="serchBoxContainer">
-            <h3>Store Search</h3>
-            <div class="form">
-              <!-- div하나 걷어내야됩니다 -> by_bosco-->
-              <form>
-                <input
-                  type="text"
-                  placeholder="매장명 또는 지역을 입력"
-                  title="매장명 또는 지역을 입력"
-                />
-                <button href="#">검색</button>
-              </form>
-            </div>
-            <div class="resulList">
-              <p>여기에는 검색 결과를 보여줄거에용</p>
-            </div>
-          </div>
-        </div>
-        <div class="newsBoxWrap">
-          <div class="newsBoxContainer">
-            <h3>Happy Kyochon</h3>
-            <div class="btnWraper d-flex">
-              <div class="eventBtn">
-                <button>이벤트</button>
-                <span class="evnetTitle">CoChon Event</span>
+
+        <div class="row partdiv">
+          <div class="serchBoxWrap col-6 bg-info">
+            <div class="serchBoxContainer">
+              <h3>Store Search</h3>
+              <div class="form">
+                <!-- div하나 걷어내야됩니다 -> by_bosco-->
+                <form style="display: flex">
+                  <input
+                    type="text"
+                    placeholder="매장명 또는 지역을 입력"
+                    title="매장명 또는 지역을 입력"
+                    class="px-5 py-1"
+                  />
+                  <button href="#">
+                    <img src="../images/ico_search.svg" alt="" />
+                  </button>
+                </form>
+                <hr />
               </div>
-              <div class="newsBtn">
-                <button>뉴스</button>
-                <span class="newsTitle">CoChon News</span>
+              <div class="resulList">
+                <p>여기에는 검색 결과를 보여줄거에용</p>
               </div>
             </div>
           </div>
+
+          <div class="newsBoxWrap col-6 bg-danger">
+            <div class="newsBoxContainer">
+              <h3>Happy Kyochon</h3>
+              <div class="btnWraper d-flex">
+                <div class="eventBtn">
+                  <button>이벤트</button>
+                  <span class="evnetTitle">CoChon Event</span>
+                </div>
+                <div class="newsBtn">
+                  <button>뉴스</button>
+                  <span class="newsTitle">CoChon News</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <!-- 7) contentsBox_end -->
       </div>
       <!-- 6) contentsWrap_end -->
       <!-- 8) botBoxWrap_start_20240328_by_edKim -->
-      <div class="container botBoxWrap">
+      <div class="container botBoxWrap bg-info">
         <h3>가맹점 개설 안내</h3>
         <p>코촌 F&B의 가족으로 모시고자 합니다</p>
         <div class="botBoxContainer row d-flex">
@@ -351,11 +360,14 @@
               <span class="line3">
                 <p>Copyright 2015 ⓒ KYOCHON F&B. All rights reserved.</p>
               </span>
-            </div>
+            </div> 
           </div>
         </div>
       </div>
     </footer>
+
+    
+    </div>
     <!-- Footer_end-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <script src="./index.js"></script>
