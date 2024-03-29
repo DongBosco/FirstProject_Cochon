@@ -13,6 +13,9 @@
       href="https://fonts.googleapis.com/css?family=Noto Sans KR"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
@@ -27,7 +30,7 @@
         <div class="container">
           <div class="d-flex justify-content-between align-items-center">
             <div class="innerTopL">
-              <ul class="d-flex">
+              <ul class="innerTopUl d-flex">
                 <li><a href="#">코촌치킨</a></li>
                 <li><a href="#"></a>교촌 F&amp;B</a></li>                                       <!--여기에 마우스오버 효과 넣어야합니다. - bosco_20240329-->
               </ul>
@@ -138,8 +141,8 @@
         <div class="swiper-pagination"></div>
 
         <!-- navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="newsSwiperBtnL swiper-button-prev"></div>
+        <div class="newsSwiperBtnR swiper-button-next"></div>
       </div>
       <!-- <div class="swipWrap bg-success">
         <br><br><br><br><br><br><br>
@@ -149,7 +152,7 @@
       <!-- 4) swipWrap_end -->
 
       <!-- 5) menuWrap_start -->
-      <div class="d-flex flex-column justify-content-center align-items-center">
+      <div class="menuWrap d-flex flex-column justify-content-center align-items-center">
         <h3 class="mt-5">MENU</h3>
         <div class="menuSwipWrap">
           <div class="menu mt-5 mb-5">
@@ -207,13 +210,9 @@
                     >
                 </div>
               </div>
-              <!-- pagination -->
-              <div class="swiper-pagination menu"></div>
-
-
               <!-- navigation buttons -->
-              <div class="swiper-button-prev menuLeft"></div>
-              <div class="swiper-button-next menuRight"></div>
+              <div class="menuSwiperBtnL swiper-button-prev menuLeft"></div>
+              <div class="menuSwiperBtnR swiper-button-next menuRight"></div>
             </div>
           </div>
         </div>
@@ -224,10 +223,10 @@
         <!-- 7) contentsBox_start -->
         <div class="row partdiv">
           <div class="serchBoxWrap col-6">
-            <div class="serchBoxContainer">
-              <h3>Store Search</h3>
-              <div class="form">
-                <form style="display: flex">
+            <div class="serchBoxContainer ">
+              <h3 class="d-flex justify-content-center align-items-center">Store Search</h3>
+              <div class="form d-flex justify-content-center align-items-center">
+                <form class="asdd" style="display: flex">
                   <input
                     type="text"
                     placeholder="매장명 또는 지역을 입력"
@@ -241,7 +240,27 @@
                 <hr />
               </div>
               <div class="resulList">
-                <p>여기에는 검색 결과를 보여줄거에용</p>
+                <ul>
+                  <li>1. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>2. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>3. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>4. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>5. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>6. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>7. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>8. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>9. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>10. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>11. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>12. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>13. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>14. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>15. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>16. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>17. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>18. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                  <li>19. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                </ul>
               </div>
             </div>
           </div>
