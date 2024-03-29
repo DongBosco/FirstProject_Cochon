@@ -264,16 +264,10 @@ a:visited {
   margin-bottom: 30px;
 }
 
-/* .form::after {
-  content: "";
-  width: 50px;
-  height: 3px;
-  display: block;
-  position: relative;
-  left: -200px;
-  top: 30px;
-  background-color: #e178c5;
-} */
+.resulList {
+  border-top: 1px solid white;
+  padding-left: 0px;
+}
 .serchBtn {
   background-color: #000;
 }
