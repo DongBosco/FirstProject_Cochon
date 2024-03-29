@@ -21,62 +21,94 @@
   </head>
   <body>
     <!-- 1),2) Header,nav_start -->
-    <nav class="header">
-      <!-- bootstrap container width fixed to 1240px or similar -->
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="innerTopL">
-            <ul class="d-flex">
-              <li><a href="#">교촌치킨</a></li>
-              <li><a href="#"></a>교촌 F&amp;B</a></li>
-            </ul>
+    <div class="navContainer">
+      <nav class="header">
+        <!-- bootstrap container width fixed to 1240px or similar -->
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="innerTopL">
+              <ul class="d-flex">
+                <li><a href="#">코촌치킨</a></li>
+                <li><a href="#"></a>교촌 F&amp;B</a></li>                                       <!--여기에 마우스오버 효과 넣어야합니다. - bosco_20240329-->
+              </ul>
+            </div>
+            <div class="innerTopR d-none d-md-block">
+              <ul class="d-flex justify-content-between align-items-center">
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li><a href="#">가맹점 개설안내</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="innerTopR d-none d-md-block">
-            <ul class="d-flex justify-content-between align-items-center">
-              <li><a href="#">고객센터</a></li>
-              <li><a href="#">사이트맵</a></li>
-              <li><a href="#">가맹점 개설안내</a></li>
-            </ul>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="logoImg">
+              <a class="navbar-brand" href="#">
+                <img
+                  src="../images/kyochon_logo.png"
+                  alt="로고로딩실패"
+                />
+              </a>
+            </div>
+            <div class="toggle d-block d-md-none"></div>
+            <div class="d-none d-md-flex">
+              <ul class="nav navbar-nav">                                                       <!--여기에 마우스오버 효과 넣어야 합니다.- bosco_20240329-->
+                <li class="gnb01">
+                  <a class ="gnbBtn" href="#">메뉴</a>
+                  <div class="gnbSub">
+                    <p class="bul"></p>
+                    <div class="gnbSubBox">
+
+                    </div>
+                  </div>
+                </li>              
+                <li class="gnb02">
+                  <a class ="gnbBtn" href="#">매장안내</a>
+                  <div class="gnbSub">
+                    <p class="bul"></p>
+                    <div class="gnbSubBox">
+
+                    </div>
+                  </div>
+                </li>
+                <li class="gnb03">
+                  <a class ="gnbBtn" href="#">이벤트</a>
+                  <div class="gnbSub">
+                    <p class="bul"></p>
+                    <div class="gnbSubBox">
+
+                    </div>
+                  </div>
+                </li>
+                <li class="gnb04">
+                  <a class ="gnbBtn" href="#">주문</a>
+                  <div class="gnbSub">
+                    <p class="bul"></p>
+                    <div class="gnbSubBox">
+
+                    </div>
+                  </div></li>
+                <li class="gnb05">
+                  <a class ="gnbBtn" href="#">E-쿠폰</a>
+                  <div class="gnbSub">
+                    <p class="bul"></p>
+                    <div class="gnbSubBox">
+
+                    </div>
+                  </div></li>
+                <li class="gnb06">
+                  <a class ="gnbBtn" href="#">교촌스토리</a>
+                  <div class="gnbSub">
+                    <p class="bul"></p>
+                    <div class="gnbSubBox">
+
+                    </div>
+                  </div></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="logoImg">
-            <a class="navbar-brand" href="#">
-              <img
-                src="../images/kyochon_logo.png"
-                alt="로고로딩실패"
-              />
-            </a>
-          </div>
-          <div class="toggle d-block d-md-none"></div>
-          <div class="d-none d-md-flex">
-            <ul class="nav navbar-nav">
-              <li><a href="#">메뉴</a></li>
-              <li>
-                <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
-              </li>
-              <li><a href="#">매장안내</a></li>
-              <li>
-                <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
-              </li>
-              <li><a href="#">이벤트</a></li>
-              <li>
-                <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
-              </li>
-              <li><a href="#">주문</a></li>
-              <li>
-                <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
-              </li>
-              <li><a href="#">E-쿠폰</a></li>
-              <li>
-                <a href="#"><img src="../images/line_footer02.gif" alt="" /></a>
-              </li>
-              <li><a href="#">교촌스토리</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <!-- 1),2) Header,nav_end -->
 
     <!-- 3) Body_start -->

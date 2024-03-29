@@ -25,21 +25,19 @@ a:visited {
 /* 1) Header_start */
 .header {
   background: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
   position: fixed;
-  width: 100%;
-  padding-bottom: 30px;
+  width: 100%;  
   top: 0;
   z-index: 10;
   font-family: "Noto Sans KR";
 }
-
 .innerTopL {
   font-size: 11px;
   font-weight: bold;
 }
 .innerTopL li {
-  padding: 10px 20px;
+  padding: 10px 50px;
 }
 
 .innerTopL li:nth-child(1) {
@@ -85,21 +83,45 @@ a:visited {
 /* 1) Header_end */
 
 /* 2) nav_start */
-.navMenuWrap {
-  margin-right: 20px;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-/* .navbar-header {
-  width: 300px;
-} */
 .nav.navbar-nav {
   display: flex;
   flex-direction: row;
-  gap: 20px;
-  margin-right: 20px;
 }
+.nav.navbar-nav>li{
+  padding: 15px;
+  background: url("/images/line_gnb.gif") no-repeat left 3px ;  
+  background-size: 1px 30%;
+  background-position-y: 40%;
+}
+.nav.navbar-nav .gnb01{
+  background: none;
+}
+
+.nav.navbar-nav>li>a{
+  background: none;
+  font-size: 22px;
+  line-height: 33px;
+  padding: 0 20px;
+  font-weight: 500;
+  color: #020000;  
+  gap: 20px;
+  width: auto;
+  height: auto;
+  letter-spacing: -0.3px;
+}
+/* .bul{
+  width: 9px;
+  height: 9px;
+  margin-left: -5px;
+  position: absolute;
+  left: 50%;
+  top:10px;
+  z-index:2;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px #d7d7d7 solid;
+  background:#fff
+} */
 
 /* 2) nav_end */
 
