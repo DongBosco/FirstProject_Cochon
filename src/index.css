@@ -233,13 +233,13 @@ a:visited {
   color: #737373;
 }
 
-.footerWrap .snsIconWrap ul.iconWrap {
-  /* background-color: red; */
+/* .footerWrap .snsIconWrap ul.iconWrap {
+  background-color: red;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-}
+} */
 .line1 {
   font-size: 14px;
   color: #737373;
