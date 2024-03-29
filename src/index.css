@@ -225,7 +225,7 @@ a:visited {
 }
 .contentsWrap .searchBoxWrap {
   display: flex;
-  background-color: green;
+  /* background-color: green; */
 }
 
 /* 6) contentsWrap_end */
@@ -239,7 +239,7 @@ a:visited {
   justify-content: center;
   align-items: space-between;
   gap: 5px;
-  background-color: red;
+  /* background-color: red; */
 }
 .newsBoxWrap::before {
   content: "";
