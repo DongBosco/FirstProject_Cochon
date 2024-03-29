@@ -261,6 +261,10 @@ a:visited {
   /* background-color: gray; */
 }
 
+.serchBtn{
+  background-color: #000;
+}
+
 /* 6) contentsWrap_end */
 
 /* 7) contentsBox_start */

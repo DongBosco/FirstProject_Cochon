@@ -18,6 +18,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./index.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
   </head>
   <body>
     <!-- 1),2) Header,nav_start -->
@@ -227,7 +228,6 @@
             <div class="serchBoxContainer">
               <h3>Store Search</h3>
               <div class="form">
-                <!-- div하나 걷어내야됩니다 -> by_bosco-->
                 <form style="display: flex">
                   <input
                     type="text"
@@ -235,7 +235,7 @@
                     title="매장명 또는 지역을 입력"
                     class="px-5 py-1"
                   />
-                  <button href="#">
+                  <button class="serchBtn"  href="new">
                     <img src="../images/ico_search.svg" alt="" />
                   </button>
                 </form>
