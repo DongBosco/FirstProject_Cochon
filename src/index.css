@@ -279,14 +279,12 @@ a:visited {
   align-items: space-between;
   gap: 5px;
 }
-
 .newsBoxWrap::before {
   content: "";
-  display: block;
-  position: relative;
+  display: block;  
   background-color: white;
-  width: 100px;
-  height: 100px;
+  width: 1px;
+  height: inherit;
 }
 .contentsWrap {
   display: flex;
@@ -295,13 +293,15 @@ a:visited {
   gap: 20px;
   background-color: #ffcb44;
   width: 100%;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .newsBoxContainer h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "sans-serif";
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 26px;
   font-weight: 700;
 }
@@ -318,7 +318,7 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Noto Sans KR";
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 18px;
 }
 
