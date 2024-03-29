@@ -17,8 +17,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./index.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
+    <link rel="stylesheet" href="/src/index.css" />
   </head>
   <body>
     <!-- 1),2) Header,nav_start -->
@@ -221,10 +220,10 @@
       </div>
       <!-- 5) menuWrap_end -->
       <!-- 6) contentsWrap_start -->
-      <div class="container contentsWrap bg-warning">     
+      <div class="container contentsWrap">     
         <!-- 7) contentsBox_start -->
         <div class="row partdiv">
-          <div class="serchBoxWrap col-6 bg-info">
+          <div class="serchBoxWrap col-6">
             <div class="serchBoxContainer">
               <h3>Store Search</h3>
               <div class="form">
@@ -246,19 +245,29 @@
               </div>
             </div>
           </div>
-          <div class="newsBoxWrap col-6 bg-danger">
+          <div class="newsBoxWrap col-6">
             <div class="newsBoxContainer">
               <h3>Happy Kyochon</h3>
               <div class="btnWraper d-flex">
                 <div class="eventBtn">
-                  <button>이벤트</button>
+                  <a href="#">
+                  <div class="bgImg">
+                    <img
+                     src="/images/ico_happy_event.png"
+                     alt="kyochon Event"/>
+                  </div>
                   <span class="evnetTitle">CoChon Event</span>
                 </div>
                 <div class="newsBtn">
-                  <button>뉴스</button>
+                  <a href="#">
+                  <div class="bgImg">
+                    <img
+                      src="../images/ico_happy_news.png"
+                      alt="Kyochon News"/>
+                  </div>
                   <span class="newsTitle">CoChon News</span>
+                  </a>
                 </div>
-              </div>
               </div>
             </div>
           </div>
@@ -410,6 +419,7 @@
     </footer>
     <!-- Footer_end-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-    <script src="./index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
+    <script src="/src/index.js"></script>
   </body>
 </html>
