@@ -73,3 +73,7 @@ swiperSlide.slideNext();
 // 8) botBoxWrap_start
 
 // 8) botBoxWrap_end
+
+// 9) Footer_start
+
+// 9) Footer_end
