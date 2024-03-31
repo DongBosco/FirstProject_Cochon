@@ -275,7 +275,6 @@ a:visited {
 }
 .modal {
   display: none; 
-  position: c; 
   z-index: 1;
   left: 0;
   top: 0;
@@ -292,6 +291,10 @@ a:visited {
   border: 1px solid #888;
   width: 80%;
 }
+/* #map{
+  width: 500px;
+  height: 300px;
+} */
 .close {
   color: #aaa;
   float: right;
@@ -414,6 +417,9 @@ height: 80px;
 
 .serchBoxContainer > h3 {
   margin-bottom: 60px;
+}
+.resulList{
+  display: flex;
 }
 .resulList ul {
   height: 109px;

@@ -1,3 +1,13 @@
+var userGeoInfo =[{y: ""},{x:""}]
+
+$(()=>{
+  navigator.geolocation.getCurrentPosition((position) => {
+    userGeoInfo.y = position.coords.latitude, 
+    userGeoInfo.x = position.coords.longitude
+  })
+});
+
+
 
 // 1) Header_start
 
@@ -52,8 +62,7 @@ const menuSwiper = new Swiper(".menu-swiper", {
   },
 });
 
-const swiperSlide = document.querySelector(".swipWrap").swiper;
-// const menuSwiperSlide = document.querySelector(".menuSwiper").menuSwiper;
+const swiperSlide = document.querySelector(".swipWrap").swiper;s
 
 swiperSlide.slideNext();
 
@@ -71,18 +80,8 @@ swiperSlide.slideNext();
 // =========================map================================ 
 var markers = [];
 var searchBtnEl = document.getElementById("searchBtn")
-
-const container = document.getElementById('map');
-
-const options = {
-	center: new kakao.maps.LatLng(37.539716, 126.851020), //지도의 중심좌표.
-	level: 4
-};
-
-const map = new kakao.maps.Map(container, options);
-
+var searchResultData;
 var ps = new kakao.maps.services.Places();
-var infowindow = new kakao.maps.InfoWindow({zIndex:1});
 
 function searchPlaces() {       
   var keyword = document.getElementById('searchInput').value+" 교촌치킨";      
@@ -101,9 +100,8 @@ function searchPlaces() {
 
   function placesSearchCB(data, status, pagination) {
     if (status === kakao.maps.services.Status.OK) {
+        searchResultData = data;
         displayPlaces(data);
-
-        // 페이지 번호를 표출합니다
         displayPagination(pagination);
 
     } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
@@ -124,98 +122,32 @@ function displayPlaces(places) {
   var listEl = document.getElementById('placesList'), 
   menuEl = document.getElementById('menu_wrap'),
   fragment = document.createDocumentFragment(), 
-  bounds = new kakao.maps.LatLngBounds(), 
   listStr = '';
 
   removeAllChildNods(listEl);
-
-  removeMarker();
   
   for ( var i=0; i<places.length; i++ ) {
 
       var placePosition = new kakao.maps.LatLng(places[i].y, places[i].x),
-          // marker = addMarker(placePosition, i), 
+
           itemEl = getListItem(i, places[i]); 
           
-      bounds.extend(placePosition);
-
-      // (function(marker, title) {
-      //     kakao.maps.event.addListener(marker, 'mouseover', function() {
-      //         displayInfowindow(marker, title);
-      //     });
-
-      //     kakao.maps.event.addListener(marker, 'mouseout', function() {
-      //         infowindow.close();
-      //     });
-
-      //     itemEl.onmouseover =  function () {
-      //         displayInfowindow(marker, title);
-      //     };
-
-      //     itemEl.onmouseout =  function () {
-      //         infowindow.close();
-      //     };
-      // })(marker, places[i].place_name);
-
       fragment.appendChild(itemEl);
   }
 
   listEl.appendChild(fragment);
   menuEl.scrollTop = 0;
-
-  map.setBounds(bounds);
 }
 
-function getListItem(index, places) {
-
+function getListItem(index, places) {  
   var el = document.createElement('li'),
   itemStr = '<span class="markerbg marker_' + (index+1) + '"></span>' +
               '<div class="info">' +
-              '   <h5 id="btn_'+places.place_id+'">' + places.place_name + '</h5>';
-
-  if (places.road_address_name) {
-      itemStr += '    <span>' + places.road_address_name + '</span>' +
-                  '   <span class="jibun gray">' +  places.address_name  + '</span>';
-  } else {
-      itemStr += '    <span>' +  places.address_name  + '</span>'; 
-  }
-               
-    itemStr += '  <span class="tel">' + places.phone  + '</span>' +
-              '</div>';           
-
+              '   <h5 id="btn_'+index+'">' + places.place_name + '</h5>';  
   el.innerHTML = itemStr;
   el.className = 'item';
 
   return el;
-}
-
-// 
-// function addMarker(position, idx, title) {
-//   var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
-//       imageSize = new kakao.maps.Size(36, 37),  // 마커 이미지의 크기
-//       imgOptions =  {
-//           spriteSize : new kakao.maps.Size(36, 691), // 스프라이트 이미지의 크기
-//           spriteOrigin : new kakao.maps.Point(0, (idx*46)+10), // 스프라이트 이미지 중 사용할 영역의 좌상단 좌표
-//           offset: new kakao.maps.Point(13, 37) // 마커 좌표에 일치시킬 이미지 내에서의 좌표
-//       },
-//       markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imgOptions),
-//           marker = new kakao.maps.Marker({
-//           position: position, // 마커의 위치
-//           image: markerImage 
-//       });
-
-//   marker.setMap(map); // 지도 위에 마커를 표출합니다
-//   markers.push(marker);  // 배열에 생성된 마커를 추가합니다
-
-//   return marker;
-// }
-
-// 지도 위에 표시되고 있는 마커를 모두 제거합니다
-function removeMarker() {
-  for ( var i = 0; i < markers.length; i++ ) {
-      markers[i].setMap(null);
-  }   
-  markers = [];
 }
 
 function displayPagination(pagination) {
@@ -247,40 +179,91 @@ function displayPagination(pagination) {
   paginationEl.appendChild(fragment);
 }
 
-function displayInfowindow(marker, title) {
-  var content = '<div style="padding:5px;z-index:1;">' + title + '</div>';
-
-  infowindow.setContent(content);
-  infowindow.open(map, marker);
-}
-
 function removeAllChildNods(el) {   
   while (el.hasChildNodes()) {
       el.removeChild (el.lastChild);
   }
 }
+
+function createMap(idx){
+  const container = document.getElementById('map');  
+  const options = {
+	  center: new kakao.maps.LatLng(searchResultData[idx].y, searchResultData[idx].x),
+    level:3
+  };
+
+  var map = new kakao.maps.Map(container, options);
+  
+  var marker = new kakao.maps.Marker({
+      map: map,
+      position: options.center
+  })
+if (searchResultData[idx].road_address_name) {
+  var infowindow = new kakao.maps.InfoWindow({
+    content: '<div style="width:150px;text-align:center;padding:6px 0;">'+ searchResultData[idx].place_name+'</div>'
+})};
+infowindow.open(map, marker);
+}
+
+
+// function createResult(idx){
+
+//   var resEl = document.getElementById('searchResInfo'),
+//   itemEl = getResultItem(idx); 
+//   fragment = document.createDocumentFragment(), 
+//   listStr = '';
+
+//   // removeAllChildNods(resEl);
+          
+//   fragment.appendChild(itemEl);  
+
+//   resEl.appendChild(fragment);
+// }
+
+// function getResultItem(idx){
+//     var tempStr = '';
+//     var resEl= document.createElement('li');
+//     var searchRes = document.getElementById("searchResInfo");
+//     tempStr = '<div class="info">' + '<h5>' + searchResultData[idx].place_name + '</h5>';
+//     if (searchResultData[idx].road_address_name) {
+//       tempStr += '   <div class="resTemp"> <span class="resRoadAddressName" >' + searchResultData[idx].road_address_name + '</span>' +
+//                   '   <span class="resAddressName">' +  searchResultData[idx].address_name  + '</span>';
+//     } else {
+//     tempStr += '    <span>' +  searchResultData[idx].address_name  + '</span>'; 
+//     } 
+//     if(searchResultData[idx].phone) {          
+//       tempStr += '  <span class="tel">' + 
+//       searchResultData[idx].phone  + 
+//       '</span>' +'</div>'; }
+  
+//     resEl.innerHTML = tempStr;
+//     return resEl
+//   }
+
+
+
 // =========================modal
 
 
 
 const modal = document.getElementById("myModal");
 
-// 모달을 닫는 <span> 요소를 가져옵니다
 const span = document.getElementsByClassName("close")[0];
 
-// 검색 버튼에 이벤트 리스너 추가
 $(".searchBtn").on('click', searchPlaces)
 
-$(document).on('click', '[id^=btn_]' ,()=>{  
+$(document).on('click', '[id^=btn_]' ,function(){  
   modal.style.display = "block";
+  var originalString = $(this).attr("id");
+  var indexOfResult = originalString.replace('btn_', '');
+  createMap(indexOfResult);
+  createResult(indexOfResult);
 })
 
-// <span> (x)를 클릭하면 모달을 닫습니다
 span.onclick = function() {
 modal.style.display = "none";
 }
 
-// 모달 외부를 클릭하면 모달을 닫습니다
 window.onclick = function(event) {
 if (event.target == modal) {
   modal.style.display = "none";
