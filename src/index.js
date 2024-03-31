@@ -62,7 +62,7 @@ const menuSwiper = new Swiper(".menu-swiper", {
   },
 });
 
-const swiperSlide = document.querySelector(".swipWrap").swiper;s
+const swiperSlide = document.querySelector(".swipWrap").swiper;
 
 swiperSlide.slideNext();
 
