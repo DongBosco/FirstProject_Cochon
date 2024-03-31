@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>코촌치킨</title>
-    <link rel="icon" href="./images/chicken.png" />
+    <link rel="icon" href="./images/chicken.png" />    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
@@ -21,20 +21,21 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./src/index.css" />    
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d648691851a6eae1f04471fdee2d23d1&libraries=services"></script>
+    
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services"></script>    <!--API키 넣으세요-->
   </head>
   <body>
     <!-- 1),2) Header,nav_start -->
     <div class="navContainer">
       <nav class="header">
         <!-- bootstrap container width fixed to 1240px or similar -->
-        <div class="container">
+        <div class="container" id="navWrap">
           <div class="d-flex justify-content-between align-items-center">
             <div class="innerTopL">
               <ul class="innerTopUl d-flex">
                 <li><a href="#">코촌치킨</a></li>
                 <li>                  
-                  <a>코촌 F&amp;B</a></li>                                       <!--여기에 마우스오버 효과 넣어야합니다. - bosco_20240329-->
+                  <a>코촌 F&amp;B</a></li>                                       
               </ul>
             </div>
             <div class="innerTopR d-none d-md-block">
@@ -234,7 +235,7 @@
                               title="매장명 또는 지역을 입력"
                               class="px-5 py-2"
                               id="searchInput"
-                              value=" "
+                              value=""
                             />
                             <button type="button" class="searchBtn" id="searchBtn" >
                               <img src="./images/ico_search.svg" alt="" />
@@ -244,8 +245,13 @@
                       </div>
                       <div id="searchBox" class="bg_white">           
                         <hr>
-                        <ul id="placesList"></ul>
-                        <div id="pagination"></div>
+                        <div class="placeWraper d-flex">
+                          <div class="placeExtra"></div>
+                          <div class="placeContainer">
+                            <ul id="placesList"></ul>
+                          </div>                          
+                        </div>              
+                          <div id="pagination"></div>                      
                       </div>
                     </div>   
                   <hr />

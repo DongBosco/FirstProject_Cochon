@@ -1,13 +1,16 @@
 var userGeoInfo =[{y: ""},{x:""}]
-
+var flag=false;
 $(()=>{
   navigator.geolocation.getCurrentPosition((position) => {
-    userGeoInfo.y = position.coords.latitude, 
-    userGeoInfo.x = position.coords.longitude
+    if(userGeoInfo.y){
+      userGeoInfo.y = position.coords.latitude, 
+      userGeoInfo.x = position.coords.longitude
+      flag=true
+      console.log("주소를 받는데 성공 하였습니다.")
+    }         
+    console.log("주소를 받는데 실패 하였습니다.")
   })
 });
-
-
 
 // 1) Header_start
 
@@ -93,10 +96,13 @@ function searchPlaces() {
 
     var searchOptions= {
       size : 5,
+      if(userGeoInfo){
+        location: new kakao.maps.LatLng(userGeoInfo.y, userGeoInfo.x)
+      }     
     }
     document.getElementById("searchTerm").innerText = keyword;
     ps.keywordSearch( keyword, placesSearchCB, searchOptions); 
-    }
+  }
 
   function placesSearchCB(data, status, pagination) {
     if (status === kakao.maps.services.Status.OK) {
@@ -136,14 +142,13 @@ function displayPlaces(places) {
   }
 
   listEl.appendChild(fragment);
-  menuEl.scrollTop = 0;
 }
 
 function getListItem(index, places) {  
   var el = document.createElement('li'),
   itemStr = '<span class="markerbg marker_' + (index+1) + '"></span>' +
               '<div class="info">' +
-              '   <h5 id="btn_'+index+'">' + places.place_name + '</h5>';  
+              '   <strong id="btn_'+index+'">' + places.place_name + '</strong>';  
   el.innerHTML = itemStr;
   el.className = 'item';
 
@@ -157,6 +162,9 @@ function displayPagination(pagination) {
 
   while (paginationEl.hasChildNodes()) {
       paginationEl.removeChild (paginationEl.lastChild);
+  }
+  if(pagination.last>3){
+    pagination.last=3;
   }
 
   for (i=1; i<=pagination.last; i++) {
@@ -251,6 +259,12 @@ const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
 
 $(".searchBtn").on('click', searchPlaces)
+$("#searchInput").on('keyup', (key)=>{
+  if(key.keyCode ==13){
+    searchPlaces()
+  }
+})
+
 
 $(document).on('click', '[id^=btn_]' ,function(){  
   modal.style.display = "block";
