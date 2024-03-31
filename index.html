@@ -21,6 +21,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./src/index.css" />
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d648691851a6eae1f04471fdee2d23d1"></script>    
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d648691851a6eae1f04471fdee2d23d1&libraries=services"></script>
   </head>
   <body>
     <!-- 1),2) Header,nav_start -->
@@ -32,7 +34,7 @@
             <div class="innerTopL">
               <ul class="innerTopUl d-flex">
                 <li><a href="#">코촌치킨</a></li>
-                <li><a href="#"></a>교촌 F&amp;B</a></li>                                       <!--여기에 마우스오버 효과 넣어야합니다. - bosco_20240329-->
+                <li><a href="#"></a>코촌 F&amp;B</a></li>                                       <!--여기에 마우스오버 효과 넣어야합니다. - bosco_20240329-->
               </ul>
             </div>
             <div class="innerTopR d-none d-md-block">
@@ -222,82 +224,81 @@
       <div class="contentsWrap">
         <div class="container contentscontainer">
         <!-- 7) contentsBox_start -->
-        <div class="row partdiv">
-          <div class="serchBoxWrap col-6">
-            <div class="serchBoxContainer ">
-              <h3 class="d-flex justify-content-center align-items-center">Store Search</h3>
-              <div class="form d-flex justify-content-center align-items-center">
-                <form class="asdd" style="display: flex">
-                  <input
-                    type="text"
-                    placeholder="매장명 또는 지역을 입력"
-                    title="매장명 또는 지역을 입력"
-                    class="px-5 py-1"
-                  />
-                  <button class="serchBtn"  href="new">
-                    <img src="./images/ico_search.svg" alt="" />
-                  </button>
-                </form>
-                <hr />
-              </div>
-              <div class="resulList">
-                <ul>
-                  <li>1. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>2. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>3. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>4. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>5. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>6. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>7. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>8. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>9. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>10. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>11. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>12. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>13. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>14. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>15. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>16. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>17. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>18. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                  <li>19. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="newsBoxWrap col-6">
-            <div class="newsBoxContainer">
-              <h3>Happy Kyochon</h3>
-              <div class="btnWraper d-flex">
-                <div class="eventBtn">
-                  <a href="#">
-                  <div class="bgImg">
-                    <img
-                     src="./images/ico_happy_event.png"
-                     alt="kyochon Event"/>
+          <div class="row partdiv">
+            <div class="serchBoxWrap col-6">
+              <div class="serchBoxContainer">
+                <h3 class="d-flex justify-content-center align-items-center">Store Search</h3>
+                <div class="form d-flex justify-content-center align-items-center">
+                  <form id="searchPlaceForm" class="searchPlace" style="display: flex">
+                    <input
+                      type="text"
+                      placeholder="매장명 또는 지역을 입력"
+                      title="매장명 또는 지역을 입력"
+                      class="px-5 py-1"
+                      id="searchInput"
+                    />
+                    <button type="button" class="searchBtn" id="searchBtn">
+                      <img src="./images/ico_search.svg" alt="" />
+                    </button>
+                  </form>
+                  <hr />
+                </div>              
+               <!-- 모달 -->
+                <div id="myModal" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>                    
+                    <div class="resulList">
+                      <div id="map" style="width:500px; height:400px;"></div>
+                      <p>여기에 지도가 표시됩니다. 검색어: <span id="searchTerm"></span></p>
+                      <ul>
+                        <li>1. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>2. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>3. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>4. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>5. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>6. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>7. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>8. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>9. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>10. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>                
+                      </ul>
+                    </div>
                   </div>
-                  <span class="evnetTitle">CoChon Event</span>
-                </div>
-                <div class="newsBtn">
-                  <a href="#">
-                  <div class="bgImg">
-                    <img
-                      src="./images/ico_happy_news.png"
-                      alt="Kyochon News"/>
-                  </div>
-                  <span class="newsTitle">CoChon News</span>
-                  </a>
                 </div>
               </div>
             </div>
+            <div class="newsBoxWrap col-6">
+              <div class="newsBoxContainer">
+                <h3>Happy Kyochon</h3>
+                <div class="btnWraper d-flex">
+                  <div class="eventBtn">
+                    <a href="#">
+                    <div class="bgImg">
+                      <img
+                      src="./images/ico_happy_event.png"
+                      alt="kyochon Event"/>
+                    </div>
+                    <span class="evnetTitle">CoChon Event</span>
+                  </div>
+                  <div class="newsBtn">
+                    <a href="#">
+                    <div class="bgImg">
+                      <img
+                        src="./images/ico_happy_news.png"
+                        alt="Kyochon News"/>
+                    </div>
+                    <span class="newsTitle">CoChon News</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>  
-
         <!-- 7) contentsBox_end -->
-      </div>
+        </div>
       <!-- 6) contentsWrap_end -->
       <!-- 8) botBoxWrap_start -->
-    </div>
+      </div>
     <div class="container botBoxWrap">        
       <h3>가맹점 개설 안내</h3>
         <p>코촌 F&B의 가족으로 모시고자 합니다</p>
