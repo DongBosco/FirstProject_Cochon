@@ -20,8 +20,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./src/index.css" />
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d648691851a6eae1f04471fdee2d23d1"></script>    
+    <link rel="stylesheet" href="./src/index.css" />    
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d648691851a6eae1f04471fdee2d23d1&libraries=services"></script>
   </head>
   <body>
@@ -146,11 +145,6 @@
         <div class="newsSwiperBtnL swiper-button-prev"></div>
         <div class="newsSwiperBtnR swiper-button-next"></div>
       </div>
-      <!-- <div class="swipWrap bg-success">
-        <br><br><br><br><br><br><br>
-        <P>여기에는 공지사항 swiper가 들어올 예정입니다.</P>
-        <br><br><br><br><br><br><br>
-      </div> -->
       <!-- 4) swipWrap_end -->
 
       <!-- 5) menuWrap_start -->
@@ -228,19 +222,31 @@
             <div class="serchBoxWrap col-6">
               <div class="serchBoxContainer">
                 <h3 class="d-flex justify-content-center align-items-center">Store Search</h3>
-                <div class="form d-flex justify-content-center align-items-center">
-                  <form id="searchPlaceForm" class="searchPlace" style="display: flex">
-                    <input
-                      type="text"
-                      placeholder="매장명 또는 지역을 입력"
-                      title="매장명 또는 지역을 입력"
-                      class="px-5 py-1"
-                      id="searchInput"
-                    />
-                    <button type="button" class="searchBtn" id="searchBtn">
-                      <img src="./images/ico_search.svg" alt="" />
-                    </button>
-                  </form>
+                <div class="form d-flex justify-content-center align-items-center">    
+                  <div class="searchForm">
+                      <div class="option">
+                        <div>
+                          <form id="searchPlaceForm" class="searchPlace" style="display: flex">
+                            <input
+                              type="text"
+                              placeholder="매장명 또는 지역을 입력"
+                              title="매장명 또는 지역을 입력"
+                              class="px-5 py-1"
+                              id="searchInput"
+                              value=" "
+                            />
+                            <button type="button" class="searchBtn" id="searchBtn" >
+                              <img src="./images/ico_search.svg" alt="" />
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                      <div id="menu_wrap" class="bg_white">           
+                        <hr>
+                        <ul id="placesList"></ul>
+                        <div id="pagination"></div>
+                      </div>
+                    </div>   
                   <hr />
                 </div>              
                <!-- 모달 -->
@@ -249,18 +255,8 @@
                     <span class="close">&times;</span>                    
                     <div class="resulList">
                       <div id="map" style="width:500px; height:400px;"></div>
-                      <p>여기에 지도가 표시됩니다. 검색어: <span id="searchTerm"></span></p>
-                      <ul>
-                        <li>1. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                        <li>2. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                        <li>3. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                        <li>4. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                        <li>5. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                        <li>6. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                        <li>7. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                        <li>8. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                        <li>9. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-                        <li>10. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>                
+                      <p> 검색어: <span id="searchTerm"></span></p>
+                      <ul>             
                       </ul>
                     </div>
                   </div>

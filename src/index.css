@@ -38,7 +38,7 @@ a:visited {
 .header {
   background: white;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
-  position: fixed;
+  /* position: fixed; */
   width: 100%;  
   top: 0;
   z-index: 10;
@@ -275,7 +275,7 @@ a:visited {
 }
 .modal {
   display: none; 
-  position: fixed; 
+  position: c; 
   z-index: 1;
   left: 0;
   top: 0;
@@ -287,7 +287,7 @@ a:visited {
 }
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; 
+  margin: 5% 15% 15% 15%;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
@@ -326,6 +326,11 @@ a:visited {
   width: 100%;
   margin-right: 0;
   margin-left: 0;
+}
+
+.searchPlace{
+  justify-content: center;
+  margin: auto;
 }
 
 .newsBoxContainer h3 {
