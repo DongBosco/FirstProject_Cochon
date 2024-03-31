@@ -56,16 +56,17 @@
             </div>
             <div class="toggle d-block d-md-none"></div>
             <div class="d-none d-md-flex">
-              <ul class="nav navbar-nav">                                                       <!--여기에 마우스오버 효과 넣어야 합니다.- bosco_20240329-->
+              <ul class="nav navbar-nav">      
+                                                                 <!--여기에 마우스오버 효과 넣어야 합니다.- bosco_20240329-->
                 <li class="gnb01">
                   <a class ="gnbBtn" href="#">메뉴</a>
                   <div class="gnbSub">
                     <p class="bul"></p>
                     <div class="gnbSubBox">
-
                     </div>
                   </div>
-                </li>              
+                </li>         
+
                 <li class="gnb02">
                   <a class ="gnbBtn" href="#">매장안내</a>
                   <div class="gnbSub">
@@ -225,7 +226,7 @@
         <div class="container contentscontainer">
         <!-- 7) contentsBox_start -->
           <div class="row partdiv">
-            <div class="serchBoxWrap col-6">
+            <div class="serchBoxWrap col-12 col-md-6">
               <div class="serchBoxContainer">
                 <h3 class="d-flex justify-content-center align-items-center">Store Search</h3>
                 <div class="form d-flex justify-content-center align-items-center">
@@ -234,15 +235,15 @@
                       type="text"
                       placeholder="매장명 또는 지역을 입력"
                       title="매장명 또는 지역을 입력"
-                      class="px-5 py-1"
+                      class="px-5 py-2"
                       id="searchInput"
                     />
                     <button type="button" class="searchBtn" id="searchBtn">
                       <img src="./images/ico_search.svg" alt="" />
                     </button>
                   </form>
-                  <hr />
                 </div>              
+                <!-- <hr /> -->
                <!-- 모달 -->
                 <div id="myModal" class="modal">
                   <div class="modal-content">
@@ -267,27 +268,28 @@
                 </div>
               </div>
             </div>
-            <div class="newsBoxWrap col-6">
+            <div class="newsBoxWrap col-12 col-md-6">
               <div class="newsBoxContainer">
                 <h3>Happy Kyochon</h3>
                 <div class="btnWraper d-flex">
                   <div class="eventBtn">
-                    <a href="#">
+                    <a href="#" class="eventContent">
                     <div class="bgImg">
                       <img
                       src="./images/ico_happy_event.png"
                       alt="kyochon Event"/>
                     </div>
-                    <span class="evnetTitle">CoChon Event</span>
+                    <span class="evnetTitle"><b>CoChon Event</b></span>
                   </div>
+                </a>
                   <div class="newsBtn">
-                    <a href="#">
+                    <a href="#" class="eventContent">
                     <div class="bgImg">
                       <img
                         src="./images/ico_happy_news.png"
                         alt="Kyochon News"/>
                     </div>
-                    <span class="newsTitle">CoChon News</span>
+                    <span class="newsTitle"><b>CoChon News</b></span>
                     </a>
                   </div>
                 </div>
@@ -422,21 +424,7 @@
                 <p>Copyright 2015 ⓒ KYOCHON F&B. All rights reserved.</p>
               </span>
             </div>
-          <div class="textBox">
-            <span class="no_line"
-              >사업장소재지 : 서울 금천구 가산디지털2로 144 현대테라타워 가산DK
-              A동 20층 2013~2018호 (우)08503
-            </span>
-            <span>상호명 : 코드랩아카데미(주)</span>
-            <span>대표이사 : 누굴까...</span><br />
-            <span class="no_line">대표번호 : 02-2038-0800</span>
-            <span>소비자상담번호 : 02-2038-0800</span>
-            <span>개인정보보호책임자 : 최 동규</span>
-            <span>영업시간 : 09:40~18:30</span>
-          </div>
-          <address>
-            Copyright 2024 &copy; CoChon F&amp;B. All rights reserved.
-          </address>
+          <dis>
         </div>
       </div>
     </footer>
