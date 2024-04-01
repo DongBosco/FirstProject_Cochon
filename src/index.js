@@ -1,16 +1,47 @@
 var userGeoInfo =[{y: ""},{x:""}]
 var flag=false;
-$(()=>{
-  navigator.geolocation.getCurrentPosition((position) => {
-    if(userGeoInfo.y){
-      userGeoInfo.y = position.coords.latitude, 
-      userGeoInfo.x = position.coords.longitude
-      flag=true
-      console.log("주소를 받는데 성공 하였습니다.")
-    }         
-    console.log("주소를 받는데 실패 하였습니다.")
-  })
-});
+$(()=>{  
+  if (!navigator.geolocation) {
+    console.log("브라우저가 지원안함.") ;
+  } else {    
+     navigator.geolocation.getCurrentPosition(onGetPosition, onGetPositionError);  
+  }
+}
+)
+
+function onGetPosition(r){
+  userGeoInfo.y = r.coords.latitude, 
+  userGeoInfo.x = r.coords.longitude
+  flag=true;
+  var defaultOption = {
+    size : 5,
+    location: new kakao.maps.LatLng(userGeoInfo.y, userGeoInfo.x)
+  }
+  ps.keywordSearch( "교촌치킨", placesSearchCB, defaultOption); 
+}
+
+function placesSearchCB(data, status, pagination) {
+  if (status === kakao.maps.services.Status.OK) {
+      searchResultData = data;
+      displayPlaces(data);
+      displayPagination(pagination);
+
+  } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
+
+      alert('검색 결과가 존재하지 않습니다.');
+      return;
+
+  } else if (status === kakao.maps.services.Status.ERROR) {
+
+      alert('검색 결과 중 오류가 발생했습니다.');
+      return;
+
+  }
+}
+
+function onGetPositionError(r){
+  console.log("주소를 받는데 실패 하였습니다.")
+}
 
 // 1) Header_start
 
