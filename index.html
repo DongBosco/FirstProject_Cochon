@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>코촌치킨</title>
-    <link rel="icon" href="./images/chicken.png" />    
+    <link rel="icon" href="./images/chicken.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
@@ -20,22 +20,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./src/index.css" />    
-    
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d648691851a6eae1f04471fdee2d23d1&libraries=services"></script>    <!--API키 넣으세요-->
+    <link rel="stylesheet" href="./src/index.css" />
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d648691851a6eae1f04471fdee2d23d1"></script>    
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d648691851a6eae1f04471fdee2d23d1&libraries=services"></script>
   </head>
   <body>
     <!-- 1),2) Header,nav_start -->
     <div class="navContainer">
       <nav class="header">
         <!-- bootstrap container width fixed to 1240px or similar -->
-        <div class="container" id="navWrap">
+        <div class="container">
           <div class="d-flex justify-content-between align-items-center">
             <div class="innerTopL">
               <ul class="innerTopUl d-flex">
                 <li><a href="#">코촌치킨</a></li>
-                <li>                  
-                  <a>코촌 F&amp;B</a></li>                                       
+                <li><a href="#"></a>코촌 F&amp;B</a></li>                                       <!--여기에 마우스오버 효과 넣어야합니다. - bosco_20240329-->
               </ul>
             </div>
             <div class="innerTopR d-none d-md-block">
@@ -147,6 +146,11 @@
         <div class="newsSwiperBtnL swiper-button-prev"></div>
         <div class="newsSwiperBtnR swiper-button-next"></div>
       </div>
+      <!-- <div class="swipWrap bg-success">
+        <br><br><br><br><br><br><br>
+        <P>여기에는 공지사항 swiper가 들어올 예정입니다.</P>
+        <br><br><br><br><br><br><br>
+      </div> -->
       <!-- 4) swipWrap_end -->
 
       <!-- 5) menuWrap_start -->
@@ -221,39 +225,22 @@
         <div class="container contentscontainer">
         <!-- 7) contentsBox_start -->
           <div class="row partdiv">
-            <div class="serchBoxWrap col-12 col-md-6">
+            <div class="serchBoxWrap col-6">
               <div class="serchBoxContainer">
                 <h3 class="d-flex justify-content-center align-items-center">Store Search</h3>
-                <div class="form d-flex justify-content-center align-items-center">    
-                  <div class="searchForm">
-                      <div class="option">
-                        <div>
-                          <form id="searchPlaceForm" class="searchPlace" style="display: flex">
-                            <input
-                              type="text"
-                              placeholder="매장명 또는 지역을 입력"
-                              title="매장명 또는 지역을 입력"
-                              class="px-5 py-2"
-                              id="searchInput"
-                              value=""
-                            />
-                            <button type="button" class="searchBtn" id="searchBtn" >
-                              <img src="./images/ico_search.svg" alt="" />
-                            </button>
-                          </form>
-                        </div>
-                      </div>
-                      <div id="searchBox" class="bg_white">           
-                        <hr>
-                        <div class="placeWraper d-flex">
-                          <div class="placeExtra"></div>
-                          <div class="placeContainer">
-                            <ul id="placesList"></ul>
-                          </div>                          
-                        </div>              
-                          <div id="pagination"></div>                      
-                      </div>
-                    </div>   
+                <div class="form d-flex justify-content-center align-items-center">
+                  <form id="searchPlaceForm" class="searchPlace" style="display: flex">
+                    <input
+                      type="text"
+                      placeholder="매장명 또는 지역을 입력"
+                      title="매장명 또는 지역을 입력"
+                      class="px-5 py-1"
+                      id="searchInput"
+                    />
+                    <button type="button" class="searchBtn" id="searchBtn">
+                      <img src="./images/ico_search.svg" alt="" />
+                    </button>
+                  </form>
                   <hr />
                 </div>              
                <!-- 모달 -->
@@ -261,39 +248,46 @@
                   <div class="modal-content">
                     <span class="close">&times;</span>                    
                     <div class="resulList">
-                      <div id="map" style = "width: 800px;height: 600px;">
-                      </div>
-                      <div id="searchTerm">
-                        <ul id="searchResInfo">                              
-                        </ul>
-                      </div>
+                      <div id="map" style="width:500px; height:400px;"></div>
+                      <p>여기에 지도가 표시됩니다. 검색어: <span id="searchTerm"></span></p>
+                      <ul>
+                        <li>1. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>2. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>3. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>4. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>5. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>6. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>7. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>8. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>9. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>10. Lorem ipsum dolor sit, amet consectetur adipisicing.</li>                
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="newsBoxWrap col-12 col-md-6">
+            <div class="newsBoxWrap col-6">
               <div class="newsBoxContainer">
                 <h3>Happy Kyochon</h3>
                 <div class="btnWraper d-flex">
                   <div class="eventBtn">
-                    <a href="#" class="eventContent">
+                    <a href="#">
                     <div class="bgImg">
                       <img
                       src="./images/ico_happy_event.png"
                       alt="kyochon Event"/>
                     </div>
-                    <span class="evnetTitle"><b>CoChon Event</b></span>
-                    </a>
+                    <span class="evnetTitle">CoChon Event</span>
                   </div>
                   <div class="newsBtn">
-                    <a href="#" class="newsContent">
+                    <a href="#">
                     <div class="bgImg">
                       <img
                         src="./images/ico_happy_news.png"
                         alt="Kyochon News"/>
                     </div>
-                    <span class="newsTitle"><b>CoChon News</b></span>
+                    <span class="newsTitle">CoChon News</span>
                     </a>
                   </div>
                 </div>
@@ -350,49 +344,55 @@
       <div class="container footerWrap">
         <div class="footerContainer">
           <div class="policyWrap">
-            <ul class="policymenu">
-              <li><a href="#">이용약관</a></li>
-              <li>|</li>
-              <li><a href="#">개인정보처리방침</a></li>
-              <li>|</li>
-              <li><a href="#">개인위치정보처리방침</a></li>
-              <li>|</li>
-              <li><a href="#">위치정보 이용약관</a></li>
-              <li>|</li>
-              <li><a href="#">영상정보처리기기 운영관리 방침</a></li>
-              <li>|</li>
-              <li><a href="#">이메일 무단수집거부</a></li>
-              <li>|</li>
-              <li><a href="#">찾아오시는 길</a></li>
-            </ul>
-            <div class="px-5 row d-flex align-items-center">
-              <div class="col-lg-4">
-                <img src="./images/ico_callNumber.svg" alt="전화주문" />
-              </div>
-              <div class="snsIconWrap d-flex col-lg-4">
+            <ul class="policymenu d-flex justify-content-center align-items-center flex-column flex-md-row">
+              <li>
                 <ul class="d-flex">
-                  <li>
-                    <a href="#"
-                    ><img src="./images/ico_facebook.svg" alt="facebook"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img src="./images/ico_insta.svg" alt="insta"
-                    /></a>                </li>
-                  <li>
-                    <a href="#"
-                    ><img src="./images/ico_youtube.svg" alt="youtube"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                    ><img src="./images/ico_twitter.svg" alt="twitter"
-                    /></a>
-                  </li>
-                </ul>                
+                  <li><a href="#">이용약관</a></li>
+                  <li>|</li>
+                  <li><a href="#">개인정보처리방침</a></li>
+                  <li>|</li>
+                  <li><a href="#">개인위치정보처리방침</a></li>
+                  <li>|</li>
+                  <li><a href="#">위치정보 이용약관</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul class="d-flex">
+                  <li>|</li>
+                  <li><a href="#">영상정보처리기기 운영관리 방침</a></li>
+                  <li>|</li>
+                  <li><a href="#">이메일 무단수집거부</a></li>
+                  <li>|</li>
+                  <li><a href="#">찾아오시는 길</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="px-5 d-flex justify-content-center align-items-center gap-3 flex-column flex-md-row">
+              <div class="footerBox">
+                <img src="./images/ico_callNumber.svg" alt="전화주문" /> 
               </div>
-              <div class="col-lg-4">
+              <div class="snsIconWrap d-flex footerBox">
+                <li>
+                  <a href="#"
+                  ><img src="./images/ico_facebook.svg" alt="facebook"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./images/ico_insta.svg" alt="insta"
+                  /></a>                </li>
+                <li>
+                  <a href="#"
+                  ><img src="./images/ico_youtube.svg" alt="youtube"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                  ><img src="./images/ico_twitter.svg" alt="twitter"
+                  /></a>
+                </li>
+              </div>
+              <div class="footerBox">
                 <a href="#"
                 ><img src="./images/ico_franchise.svg" alt="franchise"
                 /></a>
@@ -402,36 +402,36 @@
           <div class="footerTextWrap">
             <div class="textBox">
               <span class="line1">
-                <p>사업장소재지 : 사업장소재지 : 서울 금천구 가산디지털2로 144 현대테라타워 가산DK
-                  A동 20층 2013~2018호 (우)08503</p>
+                <p>사업장소재지 : 39852 경상북도 칠곡군 가산면 송신로 78</p>
                 <p>|</p>
                 <p>
-                  본사(오산교육원)주소 : 18150 경기도 오산시 동부대로 436번길
-                  55-18
+                  본사(오산교육원)주소 : 18150 <span>경기도 오산시 동부대로 436번길 55-18</span>
+                  
                 </p>
                 <p>|</p>
-                <p>상호명 : 코드랩아카데미(주)</p>
+                <p>상호명 : 교촌에프앤비(주)</p>
                 <p>|</p>
-                <p>대표이사 : 김아무개</p>
+                <p>대표이사 : 윤진호</p>
               </span>
               <span class="line2">
-                <p>대표번호 : 02-2038-0800</p>
+                <p>대표번호 : 031-371-3500</p>
                 <p>|</p>
-                <p>소비자상담번호 : 02-2038-0800</p>
+                <p>소비자상담번호 : 080-320-3000</p>
                 <p>|</p>
-                <p>사업자등록번호 : 000-00-0000</p>
+                <p>사업자등록번호 : 513-81-16574</p>
                 <p>|</p>
-                <p>통신판매업신고 : 1236549595</p>
+                <p>통신판매업신고 : 2012-경상북도칠곡-00023호</p>
                 <p>|</p>
-                <p>개인정보보호책임자 : 김 으뜸</p>
+                <p>개인정보보호책임자 : 신용우</p>
                 <p>|</p>
-                <p>영업시간 : 09:40~18:30</p>
+                <p>영업시간 : 12:00~23:30</p>
               </span>
               <span class="line3">
-                <p>Copyright 2024 ⓒ CoChon Edu. All rights reserved.</p>
+                <p>Copyright 2015 ⓒ KYOCHON F&B. All rights reserved.</p>
               </span>
-            </div>          
-          </div>
+            </div>
+    
+         
         </div>
       </div>
     </footer>
