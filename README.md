@@ -1,5 +1,7 @@
 # CoChonChicken
 
+## App deployed at:
+https://kyochonmock.netlify.app
 
 ## 1 Git clone our repo
 First click <> Code green button<br>
