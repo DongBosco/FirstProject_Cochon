@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>마커 검색 예제</title>
+    <!-- 카카오맵 API 로드 -->
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c80b374533248ba26472c6e5c877ac0b"
+    ></script>
+    <style>
+      #map {
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <input type="text" id="searchInput" placeholder="검색어를 입력하세요" />
+    <ul id="searchResult"></ul>
+
+    <script>
+      var mapContainer = document.getElementById("map"); // 지도를 표시할 div
+      var mapOption = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 5, // 지도의 확대 레벨
+      };
+      var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+      // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다
+      var positions = [
+        {
+          title: "강서구 교촌치킨",
+          content: "<div>카카오</div>",
+          info: "카카오정보1",
+          latlng: new kakao.maps.LatLng(33.450705, 126.570677),
+        },
+        {
+          title: "생태연못",
+          content: "<div>생태연못</div>",
+          info: "카카오정보1",
+          latlng: new kakao.maps.LatLng(33.450936, 126.569477),
+        },
+        {
+          title: "텃밭",
+          content: "<div>텃밭</div>",
+          info: "카카오정보1",
+          latlng: new kakao.maps.LatLng(33.450879, 126.56994),
+        },
+        {
+          title: "근린공원",
+          content: "<div>근린공원</div>",
+          info: "카카오정보1",
+          latlng: new kakao.maps.LatLng(33.451393, 126.570738),
+        },
+      ];
+
+      var markers = []; // 검색 결과 마커를 담을 배열
+      var infowindows = []; // 마커에 연결된 인포윈도우를 담을 배열
+
+      // 마커를 생성하고 지도에 표시하는 함수
+      function createMarker(position) {
+        var marker = new kakao.maps.Marker({
+          map: map,
+          position: position.latlng,
+        });
+        markers.push(marker); // 마커를 배열에 추가
+
+        // 마커 클릭 시 인포윈도우 열기
+        var infowindow = new kakao.maps.InfoWindow({
+          content: position.content,
+        });
+        infowindows.push(infowindow); // 인포윈도우를 배열에 추가
+
+        // 마커에 mouseout 이벤트 추가
+        kakao.maps.event.addListener(marker, "mouseout", function () {
+          infowindow.close();
+        });
+
+        // 마커 클릭 시 인포윈도우 열기
+        kakao.maps.event.addListener(marker, "mouseover", function () {
+          infowindow.open(map, marker);
+        });
+      }
+
+      // 검색창과 검색 결과를 위한 요소들
+      var searchInput = document.getElementById("searchInput");
+      var searchResultList = document.getElementById("searchResult");
+
+      // 검색 이벤트 처리
+      searchInput.addEventListener("input", function () {
+        var keyword = this.value;
+        searchPlaces(keyword);
+      });
+
+      // 장소 검색 함수
+      function searchPlaces(keyword) {
+        // 검색 결과 목록 초기화
+        searchResultList.innerHTML = "";
+
+        // 입력된 키워드가 포함된 위치 찾기
+        var filteredPositions = positions.filter(function (position) {
+          return position.title.includes(keyword);
+        });
+
+        // 검색 결과를 지도에 표시
+        displayMarkers(filteredPositions);
+
+        // 검색 결과를 목록에 추가
+        filteredPositions.forEach(function (position, index) {
+          var li = document.createElement("li");
+          li.innerHTML =
+            "제목: " + position.title + "<br>정보: " + position.info;
+          li.onclick = function () {
+            // 클릭한 검색 결과의 좌표로 지도 이동
+            map.setCenter(position.latlng);
+          };
+          searchResultList.appendChild(li);
+        });
+      }
+
+      // 검색 결과를 지도에 표시하는 함수
+      function displayMarkers(positions) {
+        // 기존 마커와 인포윈도우 제거
+        removeMarkers();
+
+        // 검색 결과에 따라 새로운 마커 생성
+        positions.forEach(function (position) {
+          createMarker(position);
+        });
+      }
+
+      // 지도에 표시된 마커와 인포윈도우 제거하는 함수
+      function removeMarkers() {
+        markers.forEach(function (marker) {
+          kakao.maps.event.removeListener(marker, "mouseover");
+          kakao.maps.event.removeListener(marker, "mouseout");
+          marker.setMap(null);
+        });
+        markers = []; // 배열 비우기
+
+        infowindows.forEach(function (infowindow) {
+          infowindow.close();
+        });
+        infowindows = []; // 배열 비우기
+      }
+
+      // 페이지 로드 시 모든 위치 표시
+      displayMarkers(positions);
+    </script>
+  </body>
+</html>

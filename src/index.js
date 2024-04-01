@@ -169,7 +169,7 @@ function displayPagination(pagination) {
 
   for (i=1; i<=pagination.last; i++) {
       var el = document.createElement('a');
-      el.href = "#";
+      el.href = "javascript:void(0)";
       el.innerHTML = i;
 
       if (i===pagination.current) {
@@ -210,43 +210,45 @@ if (searchResultData[idx].road_address_name) {
   var infowindow = new kakao.maps.InfoWindow({
     content: '<div style="width:150px;text-align:center;padding:6px 0;">'+ searchResultData[idx].place_name+'</div>'
 })};
+createResult(idx);
 infowindow.open(map, marker);
+
 }
 
 
-// function createResult(idx){
+function createResult(idx){
 
-//   var resEl = document.getElementById('searchResInfo'),
-//   itemEl = getResultItem(idx); 
-//   fragment = document.createDocumentFragment(), 
-//   listStr = '';
+  var resEl = document.getElementById('searchResInfo'),
+  itemEl = getResultItem(idx); 
+  fragment = document.createDocumentFragment(), 
+  listStr = '';
 
-//   // removeAllChildNods(resEl);
+  // removeAllChildNods(resEl);
           
-//   fragment.appendChild(itemEl);  
+  fragment.appendChild(itemEl);  
 
-//   resEl.appendChild(fragment);
-// }
+  resEl.appendChild(fragment);
+}
 
-// function getResultItem(idx){
-//     var tempStr = '';
-//     var resEl= document.createElement('li');
-//     var searchRes = document.getElementById("searchResInfo");
-//     tempStr = '<div class="info">' + '<h5>' + searchResultData[idx].place_name + '</h5>';
-//     if (searchResultData[idx].road_address_name) {
-//       tempStr += '   <div class="resTemp"> <span class="resRoadAddressName" >' + searchResultData[idx].road_address_name + '</span>' +
-//                   '   <span class="resAddressName">' +  searchResultData[idx].address_name  + '</span>';
-//     } else {
-//     tempStr += '    <span>' +  searchResultData[idx].address_name  + '</span>'; 
-//     } 
-//     if(searchResultData[idx].phone) {          
-//       tempStr += '  <span class="tel">' + 
-//       searchResultData[idx].phone  + 
-//       '</span>' +'</div>'; }
+function getResultItem(idx){
+    var tempStr = '';
+    var resEl= document.createElement('li');
+    var searchRes = document.getElementById("searchResInfo");
+    tempStr = '<div class="info">' + '<h5>' + searchResultData[idx].place_name + '</h5>';
+    if (searchResultData[idx].road_address_name) {
+      tempStr += '   <div class="resTemp"> <span class="resRoadAddressName" >' + searchResultData[idx].road_address_name + '</span>' +
+                  '   <span class="resAddressName">' +  searchResultData[idx].address_name  + '</span>';
+    } else {
+    tempStr += '    <span>' +  searchResultData[idx].address_name  + '</span>'; 
+    } 
+    if(searchResultData[idx].phone) {          
+      tempStr += '  <span class="tel">' + 
+      searchResultData[idx].phone  + 
+      '</span>' +'</div>'; }
   
-//     resEl.innerHTML = tempStr;
-//     return resEl
-//   }
+    resEl.innerHTML = tempStr;
+    return resEl
+  }
 
 
 
