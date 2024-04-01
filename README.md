@@ -1,4 +1,9 @@
 # CoChonChicken
 
 
-## 20240328_0219_기본_틀_완성_by_bosco_at_master_branch
+## 1 Git clone our repo
+
+## 2 Put in your API key at top of index.html
+Get your Javascript API key from kakao devleopers and replace with API KEY in
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY"></script>
+at top section of index html
