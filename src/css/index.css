@@ -1,13 +1,6 @@
-/* 
-  commit_by_bosco_20240330_01:04
-  to_do_list
-  1. 모달창과 지도
-  2. 네비게이션 마우스오버
-  3. 좌측상단박스 디자인다시
-  4. 첫번째 swiper pagination 다시
-  5. 검색기능
-  6. 전체적인 디자인 A/S
-*/
+/* CSS is for STYLE ONLY
+any layout such as dflex justify content padding etc
+should be done in html using bootstrap classname! */
 
 @charset "utf-8";
 
@@ -22,9 +15,11 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
 ul,
 li {
   list-style: none;
+  padding-left: 0;
 }
 a:link,
 a:visited {
@@ -33,15 +28,6 @@ a:visited {
 }
 
 /* 1) Header_start */
-.header {
-  background: white;
-  width: 100vw;
-  top: 0;
-  z-index: 10;
-}
-.innerTopUl {
-  padding-left: 0px;
-}
 .innerTopL {
   font-size: 12px;
   font-weight: bold;
@@ -50,10 +36,6 @@ a:visited {
   height: 27px;
   width: 99px;
   text-align: center;
-}
-.navContainer {
-  width: 90vw;
-  border: none;
 }
 .innerTopL li:nth-child(1) {
   background-color: #f8b915;
@@ -71,12 +53,6 @@ a:visited {
   border-radius: 0 0 2px 2px;
   line-height: 27px;
   color: black;
-}
-.innerTopR {
-  margin-top: 25px;
-}
-.innerTopRUl {
-  margin-top: 100px;
 }
 .innerTopR li {
   padding: 0px 8px;
@@ -127,37 +103,10 @@ a:visited {
   background: none;
 }
 
-.nav.navbar-nav > li > a {
-  background: none;
-  font-size: 22px;
-  line-height: 33px;
-  padding: 0 20px;
-  font-weight: 500;
-  color: #020000;
-  gap: 15px;
-  width: auto;
-  height: auto;
-  letter-spacing: -0.3px;
-}
-
 .navbar-nav .gnbBtn:hover {
   background-color: #ffc500;
   border-radius: 40px;
 }
-
-/* .bul{
-  width: 9px;
-  height: 9px;
-  margin-left: -5px;
-  position: absolute;
-  left: 50%;
-  top:10px;
-  z-index:2;
-  box-sizing: border-box;
-  border-radius: 50%;
-  border: 2px #d7d7d7 solid;
-  background:#fff
-} */
 
 /* 2) nav_end */
 
@@ -195,9 +144,63 @@ a:visited {
   margin: 0 13px;
 }
 
-.menuSwipWrap .swiper-slide img {
-  width: 300px;
-  height: 250px;
+.swipWrap .swiper-slide img {
+  object-fit: contain;
+  object-position: left center;
+}
+.banWrap {
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+
+.banWrap.banner1 {
+  background-color: #ffb600;
+}
+.banWrap.banner2 {
+  background-color: #fef6e9;
+}
+.banWrap.banner3 {
+  background-color: #ffe7ab;
+}
+.banWrap.banner4 {
+  background-color: #ff9f39;
+}
+.banWrap.banner5 {
+  background-color: #970707;
+}
+/* 4) swipWrap_end */
+
+/* 5) menuWrap_start */
+.menuWrap {
+  overflow: hidden;
+}
+.menuSwiperBtnL {
+  margin-left: 20px;
+}
+.menuSwiperBtnR {
+  margin-right: 20px;
+}
+.menuWrap > h3 {
+  font-size: 26px;
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+.menuCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuSlide {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .menuSwipWrap .swiper-slide span {
@@ -211,108 +214,15 @@ a:visited {
   margin: 20px;
 }
 
-.menuSwipWrap .swiper-slide,
-.swipWrap .swiper-slide {
-  align-content: center;
-}
-.swipWrap .swiper-slide img {
-  object-fit: contain;
-  /* object-position: x y 
-  object-position positions img inside its outer container */
-  object-position: left center;
-}
-
-/*css responsive start*/
-/* to make slider image size responsive */
-/* media query has 4 levels, whereas bootstrap has 5 levels of screen size */
-@media screen and (max-width: 1199px) {
-  .swipWrap .swiper-slide img {
-    width: 1920px;
-    height: 420px;
-  }
-  .menuSwipWrap .swiper-slide img {
-    width: 200px;
-    height: 150px;
-  }
-  .menuSwipWrap .menu-swiper {
-    /* background-color: blue; */
-    height: 350px;
-  }
-  .menuSwipWrap .swiper-slide span {
-    font-size: 12px;
-    padding: 10px;
-    border-radius: 25px;
-  }
-  .swiper.menu-swiper {
-    --swiper-pagination-bottom: 100px;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .swipWrap .swiper-slide img {
-    width: 1140px;
-    height: 315px;
-  }
-}
-
-/* mobile size. max width 767px */
-@media screen and (max-width: 767px) {
-  .swipWrap .swiper-slide img {
-    width: 960px;
-    height: 210px;
-  }
-}
-@media screen and (max-width: 575px) {
-  .swipWrap .swiper-slide img {
-    width: 960px;
-    height: 105px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none;
-  }
-}
-/*css responsive end*/
-
-/* 4) swipWrap_end */
-
-/* 5) menuWrap_start */
-.menuSwiperBtnL {
-  margin-left: 20px;
-}
-.menuSwiperBtnR {
-  margin-right: 20px;
-}
-.menuWrap > h3 {
-  font-size: 26px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-}
-
-.menuCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* .swiper .swiper-pagination-bullet {
+  background-color: #000;
+  margin: 0 10px !important;
+} */
 
 /* 5) menuWrap_end */
 
 /* 6) contentsWrap_start */
 
-.searchBoxWrap,
-.newsBoxWrap {
-  display: flex;
-  justify-content: center;
-  align-content: stretch;
-  gap: 20px;
-}
-
-.contentsWrap .searchBoxWrap {
-  display: flex;
-}
 .modal {
   display: none;
   z-index: 1;
@@ -391,21 +301,10 @@ a:visited {
   height: inherit;
 }
 .contentsWrap {
-  display: flex;
-  justify-content: center;
-  align-content: stretch;
-  gap: 20px;
   background-color: #ffcb44;
-  width: 100%;
-  margin-left: 0;
-  padding: 60px 0 15px 0;
 }
 
 .newsBoxContainer h3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Noto Sans KR", sans-serif;
   font-size: 26px;
   font-weight: 700;
 }
@@ -425,8 +324,11 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Noto Sans KR", sans-serif;
   font-size: 18px;
+}
+
+.storeSearch {
+  overflow: hidden;
 }
 
 /* 6) contentsWrap_end */
@@ -555,30 +457,14 @@ a:visited {
 /* 8) botBoxWrap_end */
 
 /* 9) footer_start */
-.footerWrap {
-  padding: 55px 0 0 0;
-}
-.footerWrap .footerContainer {
-  text-align: center;
-}
 .policymenu {
   font-size: 14px;
-  display: flex;
-  justify-content: center;
-  color: #737373;
 }
 .policymenu a {
   margin: 0 10px;
   color: #737373;
 }
-.footerWrap .snsIconWrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 28px 0;
-  gap: 25px;
-  color: #737373;
-}
+
 .line1 {
   font-size: 14px;
   color: #737373;
@@ -606,7 +492,64 @@ a:visited {
   /* display: flex;
   justify-content: center; */
 }
-img {
-  vertical-align: top;
-}
 /* 9) footer_end */
+
+/*css responsive start
+CSS RESPONSIVE MUST BE AT THE END OF CSS FILE! otherwise will\
+get overwritten by other css*/
+/* to make slider image size responsive */
+/* media query has 4 levels, whereas bootstrap has 5 levels of screen size */
+@media screen and (max-width: 1199px) {
+  .swipWrap .swiper-slide img {
+    width: 1920px;
+    height: 420px;
+  }
+  .menuSwipWrap .swiper-slide img {
+    width: 200px;
+    height: 150px;
+  }
+  .menuSwipWrap .menu-swiper {
+    /* background-color: blue; */
+    height: 350px;
+  }
+  .menuSwipWrap .swiper-slide span {
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 25px;
+  }
+  .swiper.menu-swiper {
+    --swiper-pagination-bottom: 100px;
+  }
+  .newsBoxWrap::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .swipWrap .swiper-slide img {
+    width: 1140px;
+    height: 315px;
+  }
+}
+
+/* mobile size. max width 767px */
+@media screen and (max-width: 767px) {
+  .swipWrap .swiper-slide img {
+    width: 960px;
+    height: 210px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .swipWrap .swiper-slide img {
+    width: 960px;
+    height: 105px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+  .eventBtn {
+    margin: 0px 5px 0px 0px;
+  }
+}
+/*css responsive end*/

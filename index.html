@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>코촌치킨</title>
-    <link rel="icon" href="./images/chicken.png" />    
+    <title>교촌치킨</title>
+    <link rel="icon" href="./src/images/chicken.png" />    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
@@ -20,25 +20,26 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./src/index.css" />    
+    <link rel="stylesheet" href="./src/css/index.css" />    
     
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8a9762e5493d3ed0abf75ddb0e833844&libraries=services"></script>    <!--API키 넣으세요-->
   </head>
   <body>
-    <!-- 1),2) Header,nav_start -->
-    <div class="navContainer">
-      <nav class="header">
-        <!-- bootstrap container width fixed to 1240px or similar -->
-        <div class="container" id="navWrap">
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="innerTopL">
-              <ul class="innerTopUl d-flex">
-                <li><a href="#">코촌치킨</a></li>
+    <!-- 1) Header start -->
+    <div class="container">
+      <!-- not recommended to use nested containers in bootstrap! -->
+      <!-- bootstrap container width fixed to 1240px or similar with px -->
+      <!-- bootstrap row comes with d-flex so no need to put d-flex!
+      bootstrap col does not come with d-flex -->
+        <div class="row justify-content-between" id="navWrap">
+            <div class="col-6 innerTopL">
+              <ul class="d-flex">
+                <li><a href="#">교촌치킨</a></li>
                 <li>                  
-                  <a>코촌 F&amp;B</a></li>                                       
+                  <a>교촌 F&amp;B</a></li>                                       
               </ul>
             </div>
-            <div class="innerTopR d-none d-md-block">
+            <div class="col-6 innerTopR d-none d-md-flex justify-content-end">
               <ul class="d-flex justify-content-between align-items-center">
                 <li><a href="#">고객센터</a></li>
                 <li><a href="#">사이트맵</a></li>
@@ -46,18 +47,18 @@
               </ul>
             </div>
           </div>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="logoImg">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-10 col-md-6 logoImg">
               <a class="navbar-brand" href="#">
                 <img
-                  src="./images/kyochon_logo.png"
+                  src="./src/images/kyochon_logo.png"
                   alt="로고로딩실패"
                 />
               </a>
             </div>
-            <div class="toggle d-block d-md-none"></div>
-            <div class="d-none d-md-flex">
-              <ul class="nav navbar-nav">                                                       <!--여기에 마우스오버 효과 넣어야 합니다.- bosco_20240329-->
+            <div class="col-2 toggle d-block d-lg-none"></div>
+            <div class="col-6 d-none d-md-flex justify-content-end">
+              <ul class="nav navbar-nav d-none d-lg-flex">
                 <li class="gnb01">
                   <a class ="gnbBtn" href="#">메뉴</a>
                   <div class="gnbSub">
@@ -115,30 +116,15 @@
         </div>
       </nav>
     </div>
-    <!-- 1),2) Header,nav_end -->
+    <!-- 1) Header end -->
 
-    <!-- 3) Body_start -->
+    <!-- 2) Body start -->
     <div class="bodyContainer">
-      <!-- 4) swipWrap_start -->
+      <!-- 3) swipWrap_start -->
       <div class="swiper swipWrap">
         <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper banner">
           <!-- Slides -->
-          <div class="swiper-slide">
-            <a href="#"><img src="./images/banner1.jpg" alt="" /></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#"><img src="./images/banner2.jpg" alt="" /></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#"><img src="./images/banner3.jpg" alt="" /></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#"><img src="./images/banner4.jpg" alt="" /></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#"><img src="./images/banner5.jpg" alt="" /></a>
-          </div>
         </div>
         <!-- pagination -->
         <div class="swiper-pagination"></div>
@@ -147,9 +133,9 @@
         <div class="newsSwiperBtnL swiper-button-prev"></div>
         <div class="newsSwiperBtnR swiper-button-next"></div>
       </div>
-      <!-- 4) swipWrap_end -->
+      <!-- 3) swipWrap_end -->
 
-      <!-- 5) menuWrap_start -->
+      <!-- 4) menuWrap_start -->
       <div class="menuWrap d-flex flex-column justify-content-center align-items-center">
         <h3 class="mt-5">MENU</h3>
         <div class="menuSwipWrap">
@@ -157,57 +143,11 @@
             <!-- Menu image slider main container -->
             <div class="swiper menu-swiper">
               <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper menu-slides">
                 <!-- Slides -->
-                <div class="swiper-slide">
-                  <a href="#" class="menuCard"
-                    ><img
-                      src="./images/original.png"
-                      alt="교촌오리지날 사진없음"
-                    /><span>교촌오리지날</span></a
-                    >
-                </div>
-                <div class="swiper-slide">
-                  <a href="#" class="menuCard"
-                    ><img
-                      src="./images/justhoney.png"
-                      alt="허니순살 사진없음"
-                    /><span>허니순살</span></a
-                    >
-                </div>
-                <div class="swiper-slide">
-                  <a href="#" class="menuCard"
-                    ><img
-                      src="./images/justred.png"
-                      alt="레드순살 사진없음"
-                    /><span>레드순살</span></a
-                    >
-                </div>
-                <div class="swiper-slide">
-                  <a href="#" class="menuCard"
-                    ><img
-                      src="./images/redhoney.png"
-                      alt="레허반반순살 사진없음"
-                    /><span>레허반반순살</span></a
-                    >
-                </div>
-                <div class="swiper-slide">
-                  <a href="#" class="menuCard"
-                    ><img
-                      src="./images/redhoneynew.png"
-                      alt="반반점보윙(레드/허니) 사진없음"
-                    /><span>반반점보윙(레드/허니)</span></a
-                    >
-                </div>
-                <div class="swiper-slide">
-                  <a href="#" class="menuCard"
-                    ><img
-                      src="./images/rednew.png"
-                      alt="반반점보윙(교촌/레드) 사진없음"
-                    /><span>반반점보윙(교촌/레드)</span></a
-                    >
-                </div>
               </div>
+              <!-- pagination -->
+              <div class="swiper-pagination"></div>
               <!-- navigation buttons -->
               <div class="menuSwiperBtnL swiper-button-prev menuLeft"></div>
               <div class="menuSwiperBtnR swiper-button-next menuRight"></div>
@@ -215,229 +155,207 @@
           </div>
         </div>
       </div>
-      <!-- 5) menuWrap_end -->
-      <!-- 6) contentsWrap_start -->
+      <!-- 4) menuWrap_end -->
+      <!-- 5) contentsWrap_start -->
       <div class="contentsWrap">
-        <div class="container contentscontainer">
-        <!-- 7) contentsBox_start -->
-          <div class="row partdiv">
-            <div class="serchBoxWrap col-12 col-md-6">
-              <div class="serchBoxContainer">
-                <h3 class="d-flex justify-content-center align-items-center">Store Search</h3>
-                <div class="form d-flex justify-content-center align-items-center">    
-                  <div class="searchForm">
-                      <div class="option">
-                        <div>
-                          <form id="searchPlaceForm" class="searchPlace" style="display: flex">
-                            <input
-                              type="text"
-                              placeholder="매장명 또는 지역을 입력"
-                              title="매장명 또는 지역을 입력"
-                              class="px-5 py-2"
-                              id="searchInput"
-                              value=""
-                            />
-                            <button type="button" class="searchBtn" id="searchBtn" >
-                              <img src="./images/ico_search.svg" alt="" />
-                            </button>
-                          </form>
-                        </div>
+        <div class="container">
+          <!-- 6) contentsBox_start -->
+          <div class="row justify-content-center storeSearch py-5">
+            <div class="col-md-6">
+              <h3 class="d-flex justify-content-center align-items-center">Store Search</h3>
+              <div class="form d-flex justify-content-center align-items-center">    
+                <div class="searchForm">
+                    <div class="option">
+                      <div>
+                        <form id="searchPlaceForm" class="searchPlace" style="display: flex">
+                          <input
+                            type="text"
+                            placeholder="매장명 또는 지역을 입력"
+                            title="매장명 또는 지역을 입력"
+                            class="px-5 py-2"
+                            id="searchInput"
+                            value=""
+                          />
+                          <button type="button" class="searchBtn" id="searchBtn" >
+                            <img src="./src/images/ico_search.svg" alt="" />
+                          </button>
+                        </form>
                       </div>
-                      <div id="searchBox" class="bg_white">           
-                        <hr>
-                        <div class="placeWraper d-flex">
-                          <div class="placeExtra"></div>
-                          <div class="placeContainer">
-                            <ul id="placesList"></ul>
-                          </div>                          
-                        </div>              
-                          <div id="pagination"></div>                      
-                      </div>
-                    </div>   
-                  <hr />
-                </div>              
-               <!-- 모달 -->
-                <div id="myModal" class="modal">
-                  <div class="modal-content">
-                    <span class="close">&times;</span>                    
-                    <div class="resulList">
-                      <div id="map" style = "width: 800px;height: 600px;">
-                      </div>
-                      <div id="searchTerm">
-                        <ul id="searchResInfo">                              
-                        </ul>
-                      </div>
+                    </div>
+                    <div id="searchBox" class="bg_white">           
+                      <hr>
+                      <div class="placeWraper d-flex">
+                        <div class="placeExtra"></div>
+                        <div class="placeContainer">
+                          <ul id="placesList"></ul>
+                        </div>                          
+                      </div>              
+                        <div id="pagination"></div>                      
+                    </div>
+                  </div>   
+                <hr />
+              </div>              
+              <!-- modal -->
+              <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>                    
+                  <div class="resulList">
+                    <div id="map" style = "width: 800px;height: 600px;">
+                    </div>
+                    <div id="searchTerm">
+                      <ul id="searchResInfo">                              
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="newsBoxWrap col-12 col-md-6">
-              <div class="newsBoxContainer">
-                <h3>Happy Kyochon</h3>
-                <div class="btnWraper d-flex">
-                  <div class="eventBtn">
-                    <a href="#" class="eventContent">
-                    <div class="bgImg">
-                      <img
-                      src="./images/ico_happy_event.png"
-                      alt="kyochon Event"/>
-                    </div>
-                    <span class="evnetTitle"><b>CoChon Event</b></span>
-                    </a>
+
+            <div class="col-md-6">
+              <h3 class="d-flex justify-content-center">Happy Kyochon</h3>
+              <div class="btnWraper d-flex">
+                <div class="eventBtn">
+                  <a href="#" class="eventContent">
+                  <div class="bgImg">
+                    <img
+                    src="./src/images/ico_happy_event.png"
+                    alt="kyochon Event"/>
                   </div>
-                  <div class="newsBtn">
-                    <a href="#" class="newsContent">
-                    <div class="bgImg">
-                      <img
-                        src="./images/ico_happy_news.png"
-                        alt="Kyochon News"/>
-                    </div>
-                    <span class="newsTitle"><b>CoChon News</b></span>
-                    </a>
+                  <span class="evnetTitle"><b>CoChon Event</b></span>
+                  </a>
+                </div>
+                <div class="newsBtn">
+                  <a href="#" class="newsContent">
+                  <div class="bgImg">
+                    <img
+                      src="./src/images/ico_happy_news.png"
+                      alt="Kyochon News"/>
                   </div>
+                  <span class="newsTitle"><b>CoChon News</b></span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-        <!-- 7) contentsBox_end -->
+      </div>
+        
+        <!-- 6) contentsBox_end -->
         </div>
-      <!-- 6) contentsWrap_end -->
-      <!-- 8) botBoxWrap_start -->
+      <!-- 5) contentsWrap_end -->
+      <!-- 7) botBoxWrap_start -->
       </div>
     <div class="container botBoxWrap">        
       <h3>가맹점 개설 안내</h3>
-        <p>코촌 F&B의 가족으로 모시고자 합니다</p>
-        <div class="botBoxContainer row d-flex">
-          <a href="#" class="botBox col-6 col-md-3">
-            <img src="./images/img_item_1.svg" alt="" />
+        <p>교촌 F&B의 가족으로 모시고자 합니다</p>
+        <div class="botBoxContainer d-flex flex-wrap">
+          <a href="#" class="botBox">
+            <img src="./src/images/img_item_1.svg" alt="" />
             <div class="boxTxtWrap">
               <span>사업전망</span>
-              <img src="./images/ico_search_blk.svg" alt="" />
+              <img src="./src/images/ico_search_blk.svg" alt="" />
             </div>
           </a>
-          <a href="#" class="botBox col-6 col-md-3">
-            <img src="./images/img_item_2.svg" alt="" />
+          <a href="#" class="botBox">
+            <img src="./src/images/img_item_2.svg" alt="" />
             <div class="boxTxtWrap">
               <span>개설절차</span>
-              <img src="./images/ico_search_blk.svg" alt="" />
+              <img src="./src/images/ico_search_blk.svg" alt="" />
             </div>
           </a>
-          <a href="#" class="botBox col-6 col-md-3">
-            <img src="./images/img_item_3.svg" alt="" />
+          <a href="#" class="botBox">
+            <img src="./src/images/img_item_3.svg" alt="" />
             <div class="boxTxtWrap">
               <span>인테리어</span>
-              <img src="./images/ico_search_blk.svg " alt="" />
+              <img src="./src/images/ico_search_blk.svg " alt="" />
             </div>
           </a>
-          <a href="#" class="botBox col-6 col-md-3">
-            <img src="./images/img_item_4.svg" alt="" />
+          <a href="#" class="botBox">
+            <img src="./src/images/img_item_4.svg" alt="" />
             <div class="boxTxtWrap">
               <span>상담창구</span>
-              <img src="./images/ico_search_blk.svg" alt="" />
+              <img src="./src/images/ico_search_blk.svg" alt="" />
             </div>
           </a>
           </div>          
         </div>
       </div>
-      <!-- 8) botBoxWrap_end -->
+      <!-- 7) botBoxWrap_end -->
     </div>
-    <!-- 3) Body_end -->
+    <!-- 2) Body_end -->
 
-    <!-- Footer_start-->
+    <!-- 8) Footer start-->
     <footer>
       <hr />
-      <div class="container footerWrap">
-        <div class="footerContainer">
-          <div class="policyWrap">
-            <ul class="policymenu">
-              <li><a href="#">이용약관</a></li>
-              <li>|</li>
-              <li><a href="#">개인정보처리방침</a></li>
-              <li>|</li>
-              <li><a href="#">개인위치정보처리방침</a></li>
-              <li>|</li>
-              <li><a href="#">위치정보 이용약관</a></li>
-              <li>|</li>
-              <li><a href="#">영상정보처리기기 운영관리 방침</a></li>
-              <li>|</li>
-              <li><a href="#">이메일 무단수집거부</a></li>
-              <li>|</li>
-              <li><a href="#">찾아오시는 길</a></li>
-            </ul>
-            <div class="px-5 row d-flex align-items-center">
-              <div class="col-lg-4">
-                <img src="./images/ico_callNumber.svg" alt="전화주문" />
-              </div>
-              <div class="snsIconWrap d-flex col-lg-4">
-                <ul class="d-flex">
-                  <li>
-                    <a href="#"
-                    ><img src="./images/ico_facebook.svg" alt="facebook"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img src="./images/ico_insta.svg" alt="insta"
-                    /></a>                </li>
-                  <li>
-                    <a href="#"
-                    ><img src="./images/ico_youtube.svg" alt="youtube"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                    ><img src="./images/ico_twitter.svg" alt="twitter"
-                    /></a>
-                  </li>
-                </ul>                
-              </div>
-              <div class="col-lg-4">
-                <a href="#"
-                ><img src="./images/ico_franchise.svg" alt="franchise"
-                /></a>
-              </div>
-            </div>
-          </div>
-          <div class="footerTextWrap">
-            <div class="textBox">
-              <span class="line1">
-                <p>사업장소재지 : 사업장소재지 : 서울 금천구 가산디지털2로 144 현대테라타워 가산DK
-                  A동 20층 2013~2018호 (우)08503</p>
-                <p>|</p>
-                <p>
-                  본사(오산교육원)주소 : 18150 경기도 오산시 동부대로 436번길
-                  55-18
-                </p>
-                <p>|</p>
-                <p>상호명 : 코드랩아카데미(주)</p>
-                <p>|</p>
-                <p>대표이사 : 김아무개</p>
-              </span>
-              <span class="line2">
-                <p>대표번호 : 02-2038-0800</p>
-                <p>|</p>
-                <p>소비자상담번호 : 02-2038-0800</p>
-                <p>|</p>
-                <p>사업자등록번호 : 000-00-0000</p>
-                <p>|</p>
-                <p>통신판매업신고 : 1236549595</p>
-                <p>|</p>
-                <p>개인정보보호책임자 : 김 으뜸</p>
-                <p>|</p>
-                <p>영업시간 : 09:40~18:30</p>
-              </span>
-              <span class="line3">
-                <p>Copyright 2024 ⓒ CoChon Edu. All rights reserved.</p>
-              </span>
-            </div>          
-          </div>
+      <div class="container d-flex flex-column justify-content-center">
+        <div class="row">
+          <ul class="policymenu">
+            <li><a href="#">이용약관</a></li>
+            <li>|</li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li>|</li>
+            <li><a href="#">개인위치정보처리방침</a></li>
+            <li>|</li>
+            <li><a href="#">위치정보 이용약관</a></li>
+            <li>|</li>
+            <li><a href="#">영상정보처리기기 운영관리 방침</a></li>
+            <li>|</li>
+            <li><a href="#">이메일 무단수집거부</a></li>
+            <li>|</li>
+            <li><a href="#">찾아오시는 길</a></li>
+          </ul>
         </div>
+        <div class="row">
+          <div class="col-4">
+            <img src="./src/images/ico_callNumber.svg" alt="전화주문" />
+          </div>
+          <div class="col-8">
+            <ul class="icons d-flex justify-content-center gap-2">
+              <!--icons-->
+            </ul>       
+          </div>
+         
+        </div>
+
+
+        <div class="row footerTextWrap">
+          <div class="textBox">
+            <span class="line1">
+              <p>사업장소재지 : 사업장소재지 : 서울 금천구 가산디지털2로 144 현대테라타워 가산DK
+                A동 20층 2013~2018호 (우)08503</p>
+              <p>|</p>
+              <p>
+                본사(오산교육원)주소 : 18150 경기도 오산시 동부대로 436번길
+                55-18
+              </p>
+              <p>|</p>
+              <p>상호명 : 코드랩아카데미(주)</p>
+              <p>|</p>
+              <p>대표이사 : 김대구</p>
+            </span>
+            <span class="line2">
+              <p>대표번호 : 02-2038-0800</p>
+              <p>|</p>
+              <p>소비자상담번호 : 02-2038-0800</p>
+              <p>|</p>
+              <p>사업자등록번호 : 000-00-0000</p>
+              <p>|</p>
+              <p>통신판매업신고 : 1236549595</p>
+              <p>|</p>
+              <p>개인정보보호책임자 : 김수호</p>
+              <p>|</p>
+              <p>영업시간 : 09:40~18:30</p>
+            </span>
+            <span class="line3">
+              <p>Copyright 2024 ⓒ KeyChon Edu. All rights reserved.</p>
+            </span>
+          </div>          
+        </div>
+        <!--footerTextWrap end-->
       </div>
     </footer>
-    <!-- Footer_end-->
+    <!-- 8) Footer end-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
-    <script src="./src/index.js"></script>
+    <script type="module" src="./src/js/index.js"></script>
   </body>
 </html>
