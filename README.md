@@ -1,5 +1,6 @@
-# CoChonChicken
-
+# Kyochon 
+I have replicated the existing Kyochon app https://www.kyochon.com/main/
+The existing app was not responsive so I have made this app responsive to fit for different screen sizes.
 
 ## 1 Git clone our repo
 First click <> Code green button<br>
