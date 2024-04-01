@@ -149,7 +149,8 @@ a:visited {
   object-position: left center;
 }
 .banWrap {
-  height: 400px;
+  height: 500px;
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #000;
@@ -170,18 +171,20 @@ a:visited {
 .banWrap.banner5 {
   background-color: #970707;
 }
+
+.banner-btn {
+  position: absolute;
+  right: 600px;
+  bottom: 20px;
+  border-radius: 17px;
+}
 /* 4) swipWrap_end */
 
 /* 5) menuWrap_start */
 .menuWrap {
   overflow: hidden;
 }
-.menuSwiperBtnL {
-  margin-left: 20px;
-}
-.menuSwiperBtnR {
-  margin-right: 20px;
-}
+
 .menuWrap > h3 {
   font-size: 26px;
   font-family: "Roboto";
@@ -213,11 +216,6 @@ a:visited {
   border-radius: 20px;
   margin: 20px;
 }
-
-/* .swiper .swiper-pagination-bullet {
-  background-color: #000;
-  margin: 0 10px !important;
-} */
 
 /* 5) menuWrap_end */
 
@@ -387,7 +385,6 @@ a:visited {
   height: 270px;
 }
 .btnWraper .newsBtn img {
-  /* background-color: #fa7070; */
   width: 100px;
   height: 80px;
 }
@@ -457,6 +454,14 @@ a:visited {
 /* 8) botBoxWrap_end */
 
 /* 9) footer_start */
+.phoneCall {
+  width: 201px;
+  height: 28px;
+}
+.franchise {
+  width: 115px;
+  height: 43px;
+}
 .policymenu {
   font-size: 14px;
 }
@@ -472,7 +477,6 @@ a:visited {
   justify-content: center;
 }
 .line1 > p {
-  /* background-color: #bbb; */
   margin: 0 7px 0 0;
 }
 .line2 {
@@ -483,14 +487,11 @@ a:visited {
   margin: 3px 0;
 }
 .line2 > p {
-  /* background-color: #bbb; */
   margin: 0 7px 0 0;
 }
 .line3 {
   font-size: 14px;
   color: #737373;
-  /* display: flex;
-  justify-content: center; */
 }
 /* 9) footer_end */
 
@@ -523,6 +524,10 @@ get overwritten by other css*/
   .newsBoxWrap::before {
     display: none;
   }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -543,10 +548,6 @@ get overwritten by other css*/
   .swipWrap .swiper-slide img {
     width: 960px;
     height: 105px;
-  }
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none;
   }
   .eventBtn {
     margin: 0px 5px 0px 0px;

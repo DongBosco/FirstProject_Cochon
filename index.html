@@ -121,17 +121,17 @@
     <!-- 2) Body start -->
     <div class="bodyContainer">
       <!-- 3) swipWrap_start -->
-      <div class="swiper swipWrap">
+      <div class="swiper swiper-container swipWrap">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper banner">
           <!-- Slides -->
         </div>
-        <!-- pagination -->
-        <div class="swiper-pagination"></div>
+        <!-- pagination
+        <div class="swiper-pagination banner"></div> -->
 
         <!-- navigation buttons -->
-        <div class="newsSwiperBtnL swiper-button-prev"></div>
-        <div class="newsSwiperBtnR swiper-button-next"></div>
+        <div class="newsSwiperBtnL swiper-button-prev bannerLeft"></div>
+        <div class="newsSwiperBtnR swiper-button-next bannerRight"></div>
       </div>
       <!-- 3) swipWrap_end -->
 
@@ -141,13 +141,13 @@
         <div class="menuSwipWrap">
           <div class="menu mt-5 mb-5">
             <!-- Menu image slider main container -->
-            <div class="swiper menu-swiper">
+            <div class="swiper swiper-container menu-swiper">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper menu-slides">
                 <!-- Slides -->
               </div>
               <!-- pagination -->
-              <div class="swiper-pagination"></div>
+              <div class="swiper-pagination menu"></div>
               <!-- navigation buttons -->
               <div class="menuSwiperBtnL swiper-button-prev menuLeft"></div>
               <div class="menuSwiperBtnR swiper-button-next menuRight"></div>
@@ -288,7 +288,7 @@
       <hr />
       <div class="container d-flex flex-column justify-content-center">
         <div class="row">
-          <ul class="policymenu">
+          <ul class="policymenu d-flex justify-content-center">
             <li><a href="#">이용약관</a></li>
             <li>|</li>
             <li><a href="#">개인정보처리방침</a></li>
@@ -304,16 +304,14 @@
             <li><a href="#">찾아오시는 길</a></li>
           </ul>
         </div>
-        <div class="row">
-          <div class="col-4">
+        <div class="d-flex justify-content-center gap-5">
+          <div class="phoneCall">
             <img src="./src/images/ico_callNumber.svg" alt="전화주문" />
           </div>
-          <div class="col-8">
-            <ul class="icons d-flex justify-content-center gap-2">
+          <ul class="icons d-flex justify-content-center gap-4">
               <!--icons-->
-            </ul>       
-          </div>
-         
+          </ul>       
+          <div class="franchise"><img src="./src/images/ico_franchise.svg" alt="가맹점 공간" /></div>
         </div>
 
 

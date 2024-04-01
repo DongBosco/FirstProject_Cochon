@@ -36,7 +36,8 @@ const swiper = new Swiper(".swipWrap", {
   },
   // Pagination
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-pagination.banner",
+    clickable: true,
   },
 
   // Navigation arrows
@@ -63,6 +64,9 @@ for (let i = 0; i < banners.length; i++) {
   bannerData += `<div class="swiper-slide banWrap banner${
     i + 1
   }" style="background-image:url(${banners[i].imageLink});">
+  <button type="button" class="btn btn-light banner-btn">${i + 1}/${
+    banners.length
+  }</button>
 </div>`;
 }
 
@@ -97,6 +101,7 @@ const menuSwiper = new Swiper(".menu-swiper", {
   // Pagination
   pagination: {
     el: ".swiper-pagination.menu",
+    clickable: true,
   },
 
   // Navigation arrows
