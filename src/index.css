@@ -9,7 +9,6 @@
   6. 전체적인 디자인 A/S
 */
 
-
 @charset "utf-8";
 
 * {
@@ -36,25 +35,25 @@ a:visited {
 /* 1) Header_start */
 .header {
   background: white;
-  width: 100vw;  
+  width: 100vw;
   top: 0;
-  z-index: 10;  
+  z-index: 10;
 }
-.innerTopUl{
-  padding-left: 0px;  
+.innerTopUl {
+  padding-left: 0px;
 }
 .innerTopL {
   font-size: 12px;
   font-weight: bold;
 }
-.innerTopL li {  
+.innerTopL li {
   height: 27px;
   width: 99px;
   text-align: center;
 }
-.navContainer{
- width: 90vw; 
- border: none;
+.navContainer {
+  width: 90vw;
+  border: none;
 }
 .innerTopL li:nth-child(1) {
   background-color: #f8b915;
@@ -67,16 +66,16 @@ a:visited {
   line-height: 27px;
   color: white;
 }
-.innerTopL li:nth-child(2):hover{
-  background: #F8B915;
+.innerTopL li:nth-child(2):hover {
+  background: #f8b915;
   border-radius: 0 0 2px 2px;
   line-height: 27px;
   color: black;
 }
-.innerTopR{
+.innerTopR {
   margin-top: 25px;
 }
-.innerTopRUl{
+.innerTopRUl {
   margin-top: 100px;
 }
 .innerTopR li {
@@ -118,23 +117,23 @@ a:visited {
   display: flex;
   flex-direction: row;
 }
-.nav.navbar-nav>li{
+.nav.navbar-nav > li {
   padding: 15px;
-  background: url("../images/line_gnb.gif") no-repeat left 3px ;  
+  background: url("../images/line_gnb.gif") no-repeat left 3px;
   background-size: 1px 30%;
   background-position-y: 40%;
 }
-.nav.navbar-nav .gnb01{
+.nav.navbar-nav .gnb01 {
   background: none;
 }
 
-.nav.navbar-nav>li>a{
+.nav.navbar-nav > li > a {
   background: none;
   font-size: 22px;
   line-height: 33px;
   padding: 0 20px;
   font-weight: 500;
-  color: #020000;  
+  color: #020000;
   gap: 15px;
   width: auto;
   height: auto;
@@ -164,7 +163,6 @@ a:visited {
 
 /* 3) Body_start */
 .bodyContainer {
-  
   margin-bottom: 80px;
 }
 /* 3) Body_end */
@@ -172,12 +170,12 @@ a:visited {
 /* 4) swipWrap_start */
 .swiper-button-prev,
 .swiper-button-next {
-  color: gray;  
+  color: gray;
 }
-.newsSwiperBtnL{
+.newsSwiperBtnL {
   margin-left: 200px;
 }
-.newsSwiperBtnR{
+.newsSwiperBtnR {
   margin-right: 200px;
 }
 .swiper.swipWrap {
@@ -206,21 +204,21 @@ a:visited {
   background-color: black;
   color: white;
   text-align: center;
-  width:fit-content;
+  width: fit-content;
   font-size: 16px;
   padding: 8px 13px 8px 13px;
   border-radius: 20px;
   margin: 20px;
 }
 
-.menuSwipWrap .swiper-slide{  
+.menuSwipWrap .swiper-slide {
   align-content: center;
 }
 
 /*css responsive start*/
 /* to make slider image size responsive */
 /* media query has 4 levels, whereas bootstrap has 5 levels of screen size */
-@media screen and (max-width: 1199px) {
+dia screen and (max-width: 1199px) {
   .swipWrap .swiper-slide img {
     width: 1920px;
     height: 420px;
@@ -268,14 +266,14 @@ a:visited {
 /* 4) swipWrap_end */
 
 /* 5) menuWrap_start */
-.menuSwiperBtnL{
+.menuSwiperBtnL {
   margin-left: 20px;
 }
-.menuSwiperBtnR{
+.menuSwiperBtnR {
   margin-right: 20px;
 }
-.menuWrap >h3{
-  font-size: 26px;  
+.menuWrap > h3 {
+  font-size: 26px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
@@ -302,15 +300,15 @@ a:visited {
   display: flex;
 }
 .modal {
-  display: none; 
+  display: none;
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  overflow: auto; 
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4); 
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .modal-content {
   background-color: #fefefe;
@@ -334,34 +332,34 @@ a:visited {
 .searchPlace {
   padding-top: 50px;
   justify-content: center;
-  margin: auto;    
+  margin: auto;
 }
-.searchPlace>input{
+.searchPlace > input {
   height: 60px;
   width: 420px;
   border: none;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.info{
-  font-weight:300;
+.info {
+  font-weight: 300;
   font-size: 18px;
-  line-height: 40px;  
+  line-height: 40px;
   text-align: left;
-  letter-spacing: -1px;  
+  letter-spacing: -1px;
   text-decoration: underline;
 }
-.placeExtra{
+.placeExtra {
   width: 30%;
 }
-.placeWraper{
+.placeWraper {
   align-items: center;
 }
-#pagination{
+#pagination {
   height: 30px;
-  color: black; 
-  text-align: center; 
-  width: 100%
+  color: black;
+  text-align: center;
+  width: 100%;
 }
 
 .newsBoxWrap {
@@ -372,7 +370,7 @@ a:visited {
 }
 .newsBoxWrap::before {
   content: "";
-  display: block;  
+  display: block;
   background-color: white;
   width: 1px;
   margin-right: 100px;
@@ -384,8 +382,8 @@ a:visited {
   align-content: stretch;
   gap: 20px;
   background-color: #ffcb44;
-  width: 100%;  
-  margin-left: 0;  
+  width: 100%;
+  margin-left: 0;
   padding: 60px 0 15px 0;
 }
 
@@ -397,7 +395,7 @@ a:visited {
   font-size: 26px;
   font-weight: 700;
 }
-.searchBtn{
+.searchBtn {
   background-color: #000;
   border: none;
   width: 60px;
@@ -421,37 +419,36 @@ a:visited {
 
 /* 7) contentsBox_start */
 
-
 /* 백그라운드 이미지 */
 .btnWraper .bgImg {
-background-color: white;
-width: 145px;
-height: 145px;
-border-radius: 50%;
-display: flex;
-justify-content: center;
-align-items: center;
-margin-bottom: 10px;
-transition: 0.2s;
+  background-color: white;
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: 0.2s;
 }
 /* 마우스 호버 */
 .btnWraper .bgImg:hover {
-transform: scale(1.1);
-box-shadow: 0px 0px 55px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 55px rgba(0, 0, 0, 0.4);
 }
 /* 이벤트Btn */
 .btnWraper .eventBtn {
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 10px;
-width: 240px;
-height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 240px;
+  height: 270px;
 }
-.evnetTitle{
+.evnetTitle {
   margin-left: 10px;
 }
-.newsTitle{
+.newsTitle {
   margin-left: 10px;
 }
 .eventContent {
@@ -461,35 +458,34 @@ height: 270px;
   text-align: center;
 }
 .btnWraper .eventBtn img {
-width: 100px;
-height: 80px;
+  width: 100px;
+  height: 80px;
 }
 /* 코촌 뉴스 */
 .btnWraper .newsBtn {
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 10px;
-width: 240px;
-height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 240px;
+  height: 270px;
 }
 .btnWraper .newsBtn img {
-/* background-color: #fa7070; */
-width: 100px;
-height: 80px;
+  /* background-color: #fa7070; */
+  width: 100px;
+  height: 80px;
 }
-
 
 .serchBoxContainer > h3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 26px;
-    font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
 }
 
-.resulList{
+.resulList {
   display: flex;
 }
 .resulList ul {
@@ -561,6 +557,7 @@ height: 80px;
   margin: 0 10px;
   color: #737373;
 }
+
 .footerWrap .snsIconWrap {
   display: flex;
   justify-content: center;
@@ -568,6 +565,9 @@ height: 80px;
   margin: 28px 0;
   gap: 25px;
   color: #737373;
+}
+.footerWrap .snsIconWrap ul {
+  padding: 0;
 }
 .line1 {
   font-size: 14px;
